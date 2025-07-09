@@ -8,7 +8,7 @@ The **death certificate** is defined as a *JSON* format.
 
 [The json schema for a single death certificate](files/electronicDeathCertificateSchema.json) 
 
-[Sample json file with multiple death certificates](files/sample.json)]
+[Sample json file with multiple death certificates](files/sample.json)
 
 ## Overview
 
