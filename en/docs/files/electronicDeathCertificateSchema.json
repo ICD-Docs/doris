@@ -1,0 +1,222 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/DeathCertificate"
+  },
+  "definitions": {
+    "DeathCertificate": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "CertificateKey": {
+          "type": "string"
+        },
+        "Issuer": {
+          "type": "string"
+        },
+        "ICDVersion": {
+          "type": "string"
+        },
+        "ICDMinorVersion": {
+          "type": "string"
+        },
+        "AdministrativeData": {
+          "$ref": "#/definitions/AdministrativeData"
+        },
+        "Part1": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LineStructure"
+          }
+        },
+        "Part2": {
+          "$ref": "#/definitions/LineStructure"
+        },
+        "Surgery": {
+          "$ref": "#/definitions/Surgery"
+        },
+        "Autopsy": {
+          "$ref": "#/definitions/Autopsy"
+        },
+        "MannerOfDeath": {
+          "$ref": "#/definitions/MannerOfDeath"
+        },
+        "FetalOrInfantDeath": {
+          "$ref": "#/definitions/FetalOrInfantDeath"
+        },
+        "MaternalDeath": {
+          "$ref": "#/definitions/MaternalDeath"
+        }
+      },
+
+      "title": "Certificate"
+    },
+    "AdministrativeData": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "DateBirth": {
+          "type": "string",
+          "format": "date"
+        },
+        "DateDeath": {
+          "type": "string",
+          "format": "date"
+        },
+        "Sex": {
+          "type": "integer"
+        },
+        "EstimatedAge": {
+          "type": "string"
+        }
+      },
+      "required": [
+      ],
+      "title": "AdministrativeData"
+    },
+    "LineStructure": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Conditions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Condition"
+          }
+        }
+      },
+      "required": [
+      ],
+      "title": "LineStructure"
+    },
+    "Condition": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Text": {
+          "type": "string"
+        },
+        "Code": {
+          "type": "string"
+        },
+        "LinearizationURI": {
+          "type": "string"
+        },
+        "FoundationURI": {
+          "type": "string"
+        },
+        "Interval": {
+          "type": "string"
+        }
+      },
+      "required": [
+      ],
+      "title": "Condition"
+    },
+    "Surgery": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "WasPerformed": {
+          "type": "integer"
+        },
+        "Reason": {
+          "type": "string"
+        },
+        "Date": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+      ],
+      "title": "Surgery"
+    },
+    "Autopsy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "WasRequested": {
+          "type": "integer"
+        },
+        "Findings": {
+          "type": "integer"
+        }
+      },
+      "required": [
+      ],
+      "title": "Autopsy"
+    },
+    "MannerOfDeath": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "MannerOfDeath": {
+          "type": "integer"
+        },
+        "DateOfExternalCauseOrPoisoning": {
+          "type": "string",
+          "format": "date"
+        },
+        "DescriptionExternalCause": {
+          "type": "string"
+        },
+        "PlaceOfOccuranceExternalCause": {
+          "type": "integer"
+        }
+      },
+      "required": [
+      ],
+      "title": "MannerOfDeath"
+    },
+    "FetalOrInfantDeath": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "MultiplePregnancy": {
+          "type": "integer"
+        },
+        "Stillborn": {
+          "type": "integer"
+        },
+        "DeathWithin24h": {
+          "type": "integer"
+        },
+        "BirthHeight": {
+          "type": "integer"
+        },
+        "PregnancyWeeks": {
+          "type": "integer"
+        },
+        "AgeMother": {
+          "type": "integer"
+        },
+        "PerinatalDescription": {
+          "type": "string"
+        }
+      },
+      "required": [
+      ],
+      "title": "FetalOrInfantDeath"
+    },
+    "MaternalDeath": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "WasPregnant": {
+          "type": "integer"
+        },
+        "TimeFromPregnancy": {
+          "type": "integer"
+        },
+        "PregnancyContribute": {
+          "type": "integer"
+        }
+      },
+      "required": [
+      ],
+      "title": "MaternalDeath"
+    }
+  }
+}

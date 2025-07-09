@@ -1,0 +1,452 @@
+[
+  {
+    "CertificateKey": "1",
+    "UCStated": {},
+    "AdministrativeData": {
+      "Sex": 1,
+      "DateDeath": "Tue Jun 17 2025",
+      "DateBirth": "Fri Mar 26 1943"
+    },
+    "Part1": [
+      {
+        "Conditions": [
+          {
+            "Code": "BC42.Z"
+          }
+        ]
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      }
+    ],
+    "Part2": {
+      "Conditions": [
+        {
+          "Code": "BA00.Z"
+        }
+      ]
+    },
+    "Surgery": {
+      "WasPerformed": 0
+    },
+    "Autopsy": {
+      "WasRequested": 0
+    },
+    "MannerOfDeath": {
+      "MannerOfDeath": 0
+    },
+    "FetalOrInfantDeath": {},
+    "MaternalDeath": {},
+    "ProcessedPart1": [
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      }
+    ],
+    "ProcessedPart2": {
+      "Conditions": []
+    }
+  },
+  {
+    "CertificateKey": "2",
+    "UCStated": {},
+    "AdministrativeData": {
+      "Sex": 2,
+      "EstimatedAge": "P52Y"
+    },
+    "Part1": [
+      {
+        "Conditions": [
+          {
+            "Code": "2C10.Z"
+          }
+        ]
+      },
+      {
+        "Conditions": [
+          {
+            "Code": "2C10.Z"
+          }
+        ]
+      },
+      {
+        "Conditions": [
+          {
+            "Code": "3A9Z"
+          }
+        ]
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      }
+    ],
+    "Part2": {
+      "Conditions": []
+    },
+    "Surgery": {
+      "WasPerformed": 1,
+      "Date": "2025-06-03T22:00:00.000Z"
+    },
+    "Autopsy": {
+      "WasRequested": 0
+    },
+    "MannerOfDeath": {
+      "MannerOfDeath": 0
+    },
+    "FetalOrInfantDeath": {},
+    "MaternalDeath": {
+      "WasPregnant": 0
+    },
+    "ProcessedPart1": [
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      }
+    ],
+    "ProcessedPart2": {
+      "Conditions": []
+    }
+  },
+  {
+    "CertificateKey": "3",
+    "UCStated": {},
+    "AdministrativeData": {
+      "Sex": 2,
+      "EstimatedAge": "P52Y"
+    },
+    "Part1": [
+      {
+        "Conditions": [
+          {
+            "Code": "MG40.1"
+          }
+        ]
+      },
+      {
+        "Conditions": [
+          {
+            "Code": "ME24.A5"
+          }
+        ]
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      }
+    ],
+    "Part2": {
+      "Conditions": [
+        {
+          "Code": "5A11"
+        }
+      ]
+    },
+    "Surgery": {},
+    "Autopsy": {},
+    "MannerOfDeath": {},
+    "FetalOrInfantDeath": {},
+    "MaternalDeath": {},
+    "ProcessedPart1": [
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      }
+    ],
+    "ProcessedPart2": {
+      "Conditions": []
+    }
+  },
+  {
+    "CertificateKey": "4",
+    "UCStated": {},
+    "AdministrativeData": {
+      "Sex": 1,
+      "EstimatedAge": "P87Y"
+    },
+    "Part1": [
+      {
+        "Conditions": [
+          {
+            "Code": "BD10",
+            "Interval": "P1Y"
+          }
+        ]
+      },
+      {
+        "Conditions": [
+          {
+            "Code": "BA00.Z",
+            "Interval": "P10Y"
+          }
+        ]
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      }
+    ],
+    "Part2": {
+      "Conditions": [
+        {
+          "Code": "5A11"
+        },
+        {
+          "Code": "CA22.Z"
+        }
+      ]
+    },
+    "Surgery": {
+      "WasPerformed": 0
+    },
+    "Autopsy": {
+      "WasRequested": 0
+    },
+    "MannerOfDeath": {
+      "MannerOfDeath": 0
+    },
+    "FetalOrInfantDeath": {},
+    "MaternalDeath": {},
+    "ProcessedPart1": [
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      }
+    ],
+    "ProcessedPart2": {
+      "Conditions": []
+    }
+  },
+  {
+    "CertificateKey": "5",
+    "UCStated": {},
+    "AdministrativeData": {
+      "Sex": 2,
+      "EstimatedAge": "P72Y"
+    },
+    "Part1": [
+      {
+        "Conditions": [
+          {
+            "Code": "PL11.0"
+          }
+        ]
+      },
+      {
+        "Conditions": [
+          {
+            "Code": "FA82"
+          }
+        ]
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      }
+    ],
+    "Part2": {
+      "Conditions": [
+        {
+          "Code": "CA22.Z"
+        },
+        {
+          "Code": "BA00.Z"
+        },
+        {
+          "Code": "BA01"
+        }
+      ]
+    },
+    "Surgery": {
+      "WasPerformed": 1,
+      "Date": "2017-06-08T22:00:00.000Z"
+    },
+    "Autopsy": {
+      "WasRequested": 0
+    },
+    "MannerOfDeath": {
+      "MannerOfDeath": 1
+    },
+    "FetalOrInfantDeath": {},
+    "MaternalDeath": {},
+    "ProcessedPart1": [
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      }
+    ],
+    "ProcessedPart2": {
+      "Conditions": []
+    }
+  },
+  {
+    "CertificateKey": "6",
+    "UCStated": {},
+    "AdministrativeData": {},
+    "Part1": [
+      {
+        "Conditions": [
+          {
+            "Code": "MC82.Z"
+          }
+        ]
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      }
+    ],
+    "Part2": {
+      "Conditions": []
+    },
+    "Surgery": {},
+    "Autopsy": {},
+    "MannerOfDeath": {},
+    "FetalOrInfantDeath": {},
+    "MaternalDeath": {},
+    "ProcessedPart1": [
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      }
+    ],
+    "ProcessedPart2": {
+      "Conditions": []
+    }
+  },
+  {
+    "CertificateKey": "7",
+    "UCStated": {},
+    "AdministrativeData": {
+      "DateDeath": "Tue Jun 17 2025",
+      "DateBirth": "Tue Feb 04 2003"
+    },
+    "Part1": [
+      {
+        "Conditions": [
+          {
+            "Code": "PA0Z"
+          }
+        ]
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      }
+    ],
+    "Part2": {
+      "Conditions": []
+    },
+    "Surgery": {},
+    "Autopsy": {},
+    "MannerOfDeath": {},
+    "FetalOrInfantDeath": {},
+    "MaternalDeath": {},
+    "ProcessedPart1": [
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      },
+      {
+        "Conditions": []
+      }
+    ],
+    "ProcessedPart2": {
+      "Conditions": []
+    }
+  }]

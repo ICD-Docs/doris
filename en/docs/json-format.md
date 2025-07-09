@@ -6,8 +6,9 @@ The main goal of this format is creation of a standard electronic representation
 
 The **death certificate** is defined as a *JSON* format. 
 
-[The json schema for a single death certificate can be found here](Annex_ElectronicDeathCertificateSchema.json) 
+[The json schema for a single death certificate](files/electronicDeathCertificateSchema.json) 
 
+[Sample json file with multiple death certificates](files/sample.json)]
 
 ## Overview
 

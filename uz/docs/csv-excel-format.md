@@ -7,10 +7,10 @@ This format can be used as an Excel (.xlsx) file or as a comma separated text fi
 ## Sample Files
 You may download small sample files from here:
 ### Sample Excel File
-- [Excel sample (.xlsx)](sample.xlsx)
+- [Excel sample (.xlsx)](files/sample.xlsx)
 
 ### Sample CSV File
-- [Comma separated text file sample (.csv)](sample.csv)
+- [Comma separated text file sample (.csv)](files/sample.csv)
 
 Detailed descriptions of the fields are explained below:
 
