@@ -1,44 +1,33 @@
 ﻿
-# Death Certificate Exchange Format
+# Formato de intercambio de certificados de defunción
 
-The main goal of this format is creation of a standard electronic representation for the [International form of medical certificate of cause of death](https://icdcdn.who.int/icd11referenceguide/en/html/index.html#international-form-of-medical-certificate-of-cause-of-death)
-
-
-The **death certificate** is defined as a *JSON* format. 
-
-[The json schema for a single death certificate can be found here](Annex_ElectronicDeathCertificateSchema.json) 
+El objetivo principal de este formato es crear una representación electrónica normalizada del [formulario internacional de certificado médico de causa de defunción](https://icdcdn.who.int/icd11referenceguide/en/html/index.html#international-form-of-medical-certificate-of-cause-of-death).
 
 
-## Overview
+El **certificado de defunción** se define en formato *JSON*. 
 
-In this document each field of the certificate is listed together with its description data type and allowed values. For some fields which can contain only specific 
-values we are specifying the mapping, where in the certificate the numeric need to be used. 
+[El esquema JSON para un único certificado de defunción se encuentra aquí](Annex_ElectronicDeathCertificateSchema.json) 
 
-i.e. when the possible values can be “yes”, “no” and “unknown” 
-we have the mapping:
+
+## Panorama general
+
+En este documento se enumeran todos los campos del certificado junto con su descripción, tipo de dato y valores permitidos. Para algunos campos que solo pueden contener valores específicos, se especifica la correspondencia que indica dónde debe utilizarse el valor numérico en el certificado. 
+
+Por ejemplo, cuando los valores posibles son “sí”, “no” y “desconocido”, establecemos la correspondencia:
 > - _no_ -> 0, 
-> - _yes_ -> 1, 
-> - _unknown_ -> 9. 
+> - _sí_ -> 1, 
+> - _se desconoce_ -> 9. 
 
-We are using `\` to identify nested structures.
-```
-```
+Se utiliza `\` (barra invertida) para identificar las estructuras anidadas.
 
-### Data types
 
-The following data types are used:
+### Tipos de datos
 
-| Type | Description |
-| --- | --- |
-| `string` | Alphanumeric value insert between quotation marks `"`. |
-| `integer` | Numeric field, whole numbers allowed |
-| `boolean` | The values allowed are `true` and `false` |
-| `structure` | _json_ structure with other fields inside |
-| `array[type]` | A list of the specific type, in our format we are using only list of other structures. i.e. array of `[ {"name": "The name"}, {"name": "Other example name name"} ]` |
-| `date` | The date field used in the certificate is using the format defined in the [W3C](https://www.w3.org/TR/NOTE-datetime). The date value need to be insert between quotation marks `"`. |
-| `duration` | Durations define the amount of intervening time in a time interval used in the certificate for the interval field. The format is defined in the [ISO_8601](https://en.wikipedia.org/wiki/ISO_8601#Durations). The duration value need to be insert between quotation marks `"`.|
+Se utilizan los siguientes tipos de datos:
 
-Example of date:
+| Tipo | Descripción | | --- | --- | | `string` | Valor alfanumérico entrecomillado `"`. | | `integer` | Campo numérico; solo se permiten números enteros | | `boolean` | Los valores permitidos son `true` y `false` | | `structure` | Estructura _JSON_ con otros campos en su interior | | `array[type]` | Una lista de un tipo específico; en nuestro formato solo utilizamos listas de otras estructuras (es decir, <i>array</i> de `[ {"name": "The name"}, {"name": "Other example name name"} ]` | | `date` | El campo de fecha utilizado en el certificado sigue el formato definido por el [W3C](https://www.w3.org/TR/NOTE-datetime). La fecha debe colocarse entre comillas `"`. | | `duration` | Las duraciones definen la cantidad de tiempo transcurrido en un intervalo temporal, tal como se utiliza en el certificado para el campo de intervalo. El formato está definido en la [norma ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#Durations). El valor de duración debe colocarse entre comillas `"`.|
+
+Ejemplo de fecha:
 
 ```
     Year:
@@ -64,199 +53,123 @@ where:
      TZD  = time zone designator (Z or +hh:mm or -hh:mm)
 ```
 
-Example of duration:
+Ejemplo de duración:
 
-```
-The duration is represented by the format P[n]Y[n]M[n]DT[n]H[n]M[n]S, P[n]W or P<date>T<time>
-In these representations, the [n] is replaced by the value for each of the date and time elements that follow the [n]. Leading zeros are not required, but the maximum number of digits for each element should be agreed to by the communicating parties. The capital letters P, Y, M, W, D, T, H, M, and S are designators for each of the date and time elements and are not replaced.
-where:
-    P is the duration designator (for period) placed at the start of the duration representation.
-    Y is the year designator that follows the value for the number of calendar years.
-    M is the month designator that follows the value for the number of calendar months.
-    W is the week designator that follows the value for the number of weeks.
-    D is the day designator that follows the value for the number of calendar days.
-    T is the time designator that precedes the time components of the representation.
-    H is the hour designator that follows the value for the number of hours.
-    M is the minute designator that follows the value for the number of minutes.
-    S is the second designator that follows the value for the number of seconds.
+\`\`\` La duración se representa con el formato P\[n]Y\[n]M\[n]DT\[n]H\[n]M\[n]S, P\[n]W o P<date>T<time>. En estas representaciones, \[n] se sustituye por el valor correspondiente a cada uno de los elementos de fecha y hora que siguen a \[n]. No se requieren ceros a la izquierda, pero el número máximo de dígitos para cada elemento debe ser acordado por las partes que se comunican. Las letras mayúsculas P, Y, M, W, D, T, H, M y S son designadores de cada uno de los elementos de fecha y hora y no se sustituyen. Corresponden a los siguientes elementos: P (<i>period</i>) es el designador de duración que se coloca al principio de la representación de la duración. Y (<i>year</i>) es el designador de año que sigue al valor del número de años naturales. M (<i>month</i>) es el designador de mes que sigue al valor del número de meses naturales. W (<i>week</i>) es el designador de semana que sigue al valor del número de semanas. D (<i>day</i>) es el designador de día que sigue al valor del número de días naturales. T (<i>time</i>) es el designador de tiempo que precede a los componentes temporales de la representación. H (<i>hour</i>) es el designador de hora que sigue al valor del número de horas. M (<i>minute</i>) es el designador de minutos que sigue al valor del número de minutos. S (<i>second</i>) es el designador de segundos que sigue al valor del número de segundos.
 
-For example, "P3Y6M4DT12H30M5S" represents a duration of "three years, six months, four days, twelve hours, thirty minutes, and five seconds".
-To resolve ambiguity, "P1M" is a one-month duration and "PT1M" is a one-minute duration.
+Por ejemplo, "P3Y6M4DT12H30M5S" representa una duración de "tres años, seis meses, cuatro días, doce horas, treinta minutos y cinco segundos". Para evitar ambigüedades, "P1M" representa una duración de un mes y "PT1M" representa una duración de un minuto.
 
-Practical examples:
-    "PT10S" is a ten seconds duration
-    "PT10M" is a ten minutes duration
-    "PT10H" is a ten hours duration
-    "P5D" is a five days duration
-    "P2W" is a two weeks duration
-    "P10M" is a ten months duration
-    "P10Y" is a ten years duration
-    "", "P" or "PT" is used for unknown interval.
-```
+Ejemplos prácticos: “PT10S” indica una duración de diez segundos, “PT10M” indica una duración de diez minutos, “PT10H” indica una duración de diez horas, “P5D” indica una duración de cinco días, “P2W” indica una duración de dos semanas, “P10M” indica una duración de diez meses y “P10Y” indica una duración de diez años. “”, “P” o “PT” se utilizan para intervalos desconocidos. \`\`\`
 
-### Certificate Fields
+### Campos del certificado
 
 
-| Attribute |  Type | Description |
-| --- | --- | --- | 
-| `CertificateKey` |  `string` | Can be used to identify the certificate. |
-| `Issuer` |  `string` | Can be used to identify the issuer. |
-| `ICDVersion`  | `string` | If the certificate contains coded data, this field specifies the ICD version used for the coding of the certificate. e.g.`ICD10` or `ICD11`|
-| `ICDMinorVersion`  | `string` | If the certificate contains coded data, this field specifies the ICD minor version used for the coding of the certificate associated to the ICD version.|
-| `AdministrativeData` |  `structure` |  Administrative data structure with nested fields below. |
-| `AdministrativeData\DateBirth` | `date` ||
-| `AdministrativeData\DateDeath` | `date` ||
-| `AdministrativeData\Sex` | `integer` | |
-| `AdministrativeData\EstimatedAge` | `duration` |  Estimated age if `DateBirth` and `DateDeath` are missing. |
+| Atributo | Tipo | Descripción | | --- | --- | | `CertificateKey` | `string` | Puede utilizarse para identificar el certificado. | `Issuer` `string` Puede utilizarse para identificar al emisor. | | `ICDVersion` | `string` | Si el certificado contiene datos codificados, este campo especifica la versión de la CIE utilizada para la codificación del certificado, por ejemplo,`ICD10` o `ICD11`| | `ICDMinorVersion` | `string` | Si el certificado contiene datos codificados, este campo especifica la versión menor de la CIE utilizada para la codificación del certificado.| | `AdministrativeData` | `structure` | Estructura de datos administrativos con los campos anidados que se detallan a continuación. | | `AdministrativeData\DateBirth` | `date` | | `AdministrativeData\DateDeath` | `date` | | `AdministrativeData\Sex` | `integer` | | `AdministrativeData\EstimatedAge` | `duration` | Edad estimada si faltan `DateBirth` y `DateDeath`. |
 
-> `Sex` mapping values:  
-> - 1 <- Male
-> - 2 <- Female
-> - 9 <- Unknown
+> `Sex` valores de correspondencia:  
+> \- 1 <- Masculino - 2 <- Femenino - 9 <- Desconocido
 
-| Attribute |  Type | Description |
-| :- | :- | --- | 
-| `Part1` | `[line structure]` |  List of  _line structure_ for each line in Part 1 |
-| `Part2` | `line structure`  | _line structure_ having all conditions in Part2  |
+| Atributo | Tipo | Descripción | | :- | :- | --- | | `Part1` | `[line structure]` | Lista de _estructuras de línea_ para cada línea de la Parte 1 | | `Part2` | `line structure` | _Estructura de línea_ que contiene todas las condiciones de la Parte 2 |
 
 
-#### Single Condition structure
+#### Estructura de condición individual
 
-| Attribute | Type | Description |
-| :- | :- | --- |
-| `Text` | `string` | Textual description or condition chosen by certifier. |
-| `Code` | `string` | Classification code. (For ICD 11 its allowed to use post coordination, i.e. “Stem A & Ext 1 / Stem B”.) |
-| `LinearizationURI` | `string` | Only used for the ICD-11. Linearization URI can contain post coordination (Stem URI A & Ext URI 1 / Stem URI B). |
-| `FoundationURI` | `string` | Only used for the ICD-11 Foundation URI when the Linearization URI are not sufficient to archive the level of detail needed and with possible post coordination (Stem URI A & Ext URI 1 / Stem URI B).  |
-| `Interval` | `duration` | Time interval from onset to death. |
-||| _The fields above (Code and URIs) are to be used if the certificate contains coded information. In the case for a coded certificate one of the three is sufficient but a certificate could have several filled_ |
+| Atributo | Tipo | Descripción | | :- | :- | --- | | `Text` | `string` | Descripción textual o condición indicada por el certificador. | | `Code` | `string` | Código de clasificación. (Para la CIE-11 se permite el uso de poscoordinación, es decir: "Código de base A & Código de extensión 1 / Código de base B"). | | `LinearizationURI` | `string` | Solo se usa para la CIE-11. La URI de linealización puede contener poscoordinación (URI de código de base A & URI de código de extensión 1 / URI de código de base B). | | `FoundationURI` | `string` | Solo se utiliza para la URI de Fundación de la CIE‑11 cuando la URI de Linealización no es suficiente para reflejar el nivel de detalle requerido, con posible poscoordinación (URI de código base A & URI de código de extensión 1 / URI de código de base B). | | `Interval` | `duration` | Intervalo de tiempo desde el inicio hasta la muerte. | || _Los campos anteriores (código y URI) deben usarse si el certificado contiene información codificada. En el caso de un certificado codificado, uno de los tres es suficiente, pero un certificado puede tener varios_ | completados.
 
 
 
-#### Line structure
+#### Estructura de línea
 
-| Attribute | Type | Description |
-| --- | --- | --- |
-| `Conditions` | `[Single condition structure]` | array of conditions in a single line in Part1 |
+| Atributo | Tipo | Descripción | | --- | --- | | | `Conditions` | `[Single condition structure]` | array de condiciones en una sola línea de la Parte 1 |
 
 
-| Attribute |  Type | Description |
-| --- | :- | --- | 
-| `Surgery` | `structure`  | Used when surgery was performed. Fill the nested fields. |
-| `Surgery\WasPerformed` | `integer` | “Was surgery performed within the last 4 weeks?” |
-| `Surgery\Date` |  `date`  | Is surgery was performed specify date. |
-| `Surgery\Reason` | `string`  | If _yes_, specify reason for surgery (disease or condition). |
+| Atributo | Tipo | Descripción | | --- | :- | --- | | `Surgery` | `structure` | Se utiliza cuando se ha realizado una cirugía. Complete los campos anidados. | | `Surgery\WasPerformed` | `integer` | "¿Se realizó una cirugía en las últimas 4 semanas?" | | `Surgery\Date` | `date` | Si se realizó una cirugía, especifique la fecha. `Surgery\Reason` `string` | Si la respuesta es _Sí_, especifique el motivo de la cirugía (enfermedad o afección). |
 
-> `Surgery\WasPerformed` mapping values:  
-> - 0 <- No  
-> - 1 <- Yes 
-> - 9 <- Unknown
+> `Surgery\WasPerformed` valores de correspondencia:  
+> \- 0 <- No  
+> \- 1 <- Sí - 9 <- Desconocido
 
 
-The following fields are a nested structure used to state condition line of the certificate. They are used by fields as `Part1` and `Part2` 
+Los siguientes campos forman una estructura anidada utilizada para indicar la línea de condición del certificado. Se utilizan en campos como `Part1` y `Part2` 
 
 
-| Attribute |  Type |  Description |
-| --- | :-: | --- |
-| `Autopsy` |  `structure` |  If autopsy was requested, fill the nested fields.  |
-| `Autopsy\WasRequested` |  `integer` |  “Was an autopsy requested?”. |
-| `Autopsy\Findings` |  `integer` |  “If yes were the findings used in the certification?”. |
+| Atributo | Tipo | Descripción | | --- | :-: | --- | | `Autopsy` | `structure` | Si se solicitó una autopsia, complete los campos anidados. | | `Autopsy\WasRequested` | `integer` | "¿Se solicitó una autopsia?". | | `Autopsy\Findings` | `integer` | "En caso afirmativo, ¿se utilizaron los hallazgos en la certificación?". |
 
- `Autopsy\WasRequested` mapping values:  
+ `Autopsy\WasRequested` valores de correspondencia:  
 > - 0 <- No
-> - 1 <- Yes
-> - 9 <- Unknown
+> - 1 <- Sí
+> - 9 <- Se desconoce
 
- `Autopsy\Findings` mapping values:  
+ `Autopsy\Findings` valores de correspondencia:  
 > - 0 <- No
-> - 1 <- Yes
-> - 9 <- Unknown
+> - 1 <- Sí
+> - 9 <- Se desconoce
 
-| Attribute | Type |  Description |
-| --- | :-: | --- | 
-| `MannerOfDeath` | `structure` |  Fill the nested fields. |
-| `MannerOfDeath\MannerOfDeath` | `integer` |   |
-| `MannerOfDeath\DateOfExternalCauseOrPoisoning`  | `date` |   |
-| `MannerOfDeath\DescriptionExternalCause` |  `string` |  |
-| `MannerOfDeath\PlaceOfOccuranceExternalCause`  | `integer` |  |
+| Atributo | Tipo | Descripción | | --- | :-: | --- | | `MannerOfDeath` | `structure` | Complete los campos anidados. | | `MannerOfDeath\MannerOfDeath` | `integer` | | | `MannerOfDeath\DateOfExternalCauseOrPoisoning` | `date` | | `MannerOfDeath\DescriptionExternalCause` | `string` | | | `MannerOfDeath\PlaceOfOccuranceExternalCause` | `integer` | |
 
- `MannerOfDeath\MannerOfDeath` mapping values:  
-> - 0 <- Disease
-> - 1 <- Accident
-> - 2 <- Intentional self harm
-> - 3 <- Assault
-> - 4 <- Legal intervention
-> - 5 <- War
-> - 6 <- Could not be determined
-> - 7 <- Pending investigation
-> - 9 <- Unknown
+ `MannerOfDeath\MannerOfDeath` valores de correspondencia:  
+> - 0 <- Enfermedad
+> - 1 <- Accidente
+> - 2 <- Lesión autoinfligida intencionalmente
+> - 3 <- Agresión
+> - 4 <- Intervención legal
+> - 5 <- Guerra
+> - 6 <- No se pudo determinar
+> - 7 <- Pendiente de investigación
+> - 9 <- Desconocido
 
- `MannerOfDeath\PlaceOfOccuranceExternalCause` mapping values:
-> - 0: At home
-> - 1: Residential institution
-> - 2: School, other institution, public administration area
-> - 3: Sports and athletics area
-> - 4: Street and highway
-> - 5: Trade and service area
-> - 6: Industrial and construction area
-> - 7: Farm
-> - 8: Other place
-> - 9: Unknown
+ `MannerOfDeath\PlaceOfOccuranceExternalCause` valores de correspondencia:
+> - 0: En el hogar
+> - 1: Institución residencial
+> - 2: Escuela u otra institución, área administrativa pública
+> - 3: Área de deportes y atletismo
+> - 4: Calle y carretera
+> - 5: Área de comercio y servicios
+> - 6: Área industrial y de la construcción
+> - 7: Granja
+> - 8: Otro lugar
+> - 9: Desconocido
 
-| Attribute |  Type |  Description |
-| --- | :-: | --- | 
-| `FetalOrInfantDeath` |  `structure` |   |
-| `FetalOrInfantDeath\MultiplePregnancy` |  `integer` |   |
-| `FetalOrInfantDeath\Stillborn` |  `integer` |   |
-| `FetalOrInfantDeath\DeathWithin24h` |  `integer` |   |
-| `FetalOrInfantDeath\BirthWeight` |  `integer` |   |
-| `FetalOrInfantDeath\PregnancyWeeks` |  `integer` |   |
-| `FetalOrInfantDeath\AgeMother` |  `integer` |   |
-| `FetalOrInfantDeath\PerinatalDescription` |  `string` |   |
+| Atributo | Tipo | Descripción | | --- | :-: | --- | | `FetalOrInfantDeath` | `structure` | | `FetalOrInfantDeath\MultiplePregnancy` | `integer` | | `FetalOrInfantDeath\Stillborn` | `integer` | | `FetalOrInfantDeath\DeathWithin24h` | `integer` | | `FetalOrInfantDeath\BirthWeight` | `integer` | | | `FetalOrInfantDeath\PregnancyWeeks` | `integer` | | | `FetalOrInfantDeath\AgeMother` | `integer` | | | `FetalOrInfantDeath\PerinatalDescription` | `string` | |
 
- `FetalOrInfantDeath\MultiplePregnancy` mapping values:  
+ `FetalOrInfantDeath\MultiplePregnancy` valores de correspondencia:  
 > - 0 <- No
-> - 1 <- Yes
-> - 9 <- Unknown
+> - 1 <- Sí
+> - 9 <- Desconocido
 
- `FetalOrInfantDeath\Stillborn` mapping values:  
+ `FetalOrInfantDeath\Stillborn` valores de correspondencia:  
 > - 0 <- No
-> - 1 <- Yes
-> - 9 <- Unknown
+> - 1 <- Sí
+> - 9 <- Desconocido
 
-| Attribute |  Type |  Description |
-| --- | :-: | --- | 
-| `MaternalDeath` | `structure` |   |
-| `MaternalDeath\WasPregnant` |  `integer` |   |
-| `MaternalDeath\TimeFromPregnancy` |  `integer` |   |
-| `MaternalDeath\PregnancyContribute` |  `integer` |   |
+| Atributo | Tipo | Descripción | | --- | :-: | --- | | `MaternalDeath` | `structure` | | `MaternalDeath\WasPregnant` | `integer` | | `MaternalDeath\TimeFromPregnancy` | `integer` | | `MaternalDeath\PregnancyContribute` | `integer` | |
 
- `MaternalDeath\WasPregnant` mapping values:  
+ `MaternalDeath\WasPregnant` valores de correspondencia:  
 > - 0 <- No
-> - 1 <- Yes
-> - 9 <- Unknown
+> - 1 <- Sí
+> - 9 <- Desconocido
 
- `MaternalDeath\TimeFromPregnancy` mapping values:  
-> - 0 <- At time of death
-> - 1 <- Within 42 days before the death
-> - 2 <- Between 43 days up to 1 year before death
-> - 3 <- One year or more before death
-> - 9 <- Unknown
+ `MaternalDeath\TimeFromPregnancy` valores de correspondencia:  
+> - 0 <- En el momento de la muerte
+> - 1 <- Dentro de los 42 días antes de la muerte
+> - 2 <- Entre 43 días y hasta 1 año antes de la muerte
+> - 3 <- Un año o más antes de la muerte
+> - 9 <- Desconocido
 
- `MaternalDeath\PregnancyContribute` mapping values:  
+ `MaternalDeath\PregnancyContribute` valores de correspondencia:  
 > - 0 <- No
-> - 1 <- Yes
-> - 9 <- Unknown
+> - 1 <- Sí
+> - 9 <- Desconocido
 
 
-## Array of certificates
-While we have seen the format of the death certificate, the file with certificates need and array of certificates, which in json is created by using square brackets `[`certificate `,` certificate `,`...`,`certificate `]` 
+## Array de certificados
+Aunque ya hemos visto el formato del certificado de defunción, el archivo con los certificados necesita un array de certificados, que en JSON se crea utilizando corchetes: `[`certificado`,` certificado`,`...`,` certificado`]` 
 
-## Example
+## Ejemplo
 
-Two examples of certificates for ICD10 and ICD11.
+Dos ejemplos de certificados para la CIE-10 y la CIE-11.
 
-#### ICD-10 example
+#### Ejemplo para la CIE-10
 ```
 [
     {
@@ -320,7 +233,7 @@ Two examples of certificates for ICD10 and ICD11.
     }
 ]
 ```
-#### ICD-11 example
+#### Ejemplo para la CIE-11
 ```
 [
     {
