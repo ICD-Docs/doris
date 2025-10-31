@@ -1,85 +1,84 @@
-# DORIS Web Version
+# DORIS versión en línea
 
-DORIS Web Version is a web-based application accessible through a web browser. It applies the ICD mortality rules on individual death certificates for automated cause of death selection. The web version can be accessed [here](https://icd.who.int/doris/workspace/en). 
+La versión en línea de DORIS es una aplicación web accesible a través de un navegador. Aplica las reglas de mortalidad de la CIE para seleccionar automáticamente la causa de defunción en certificados individuales. Puede acceder a la versión en línea [aquí](https://icd.who.int/doris/workspace/en). 
 
-It supports the 13 officially released ICD-11 languages, including [Arabic](https://icd.who.int/doris/ar), [Chinese](https://icd.who.int/doris/zh), [Czech](https://icd.who.int/doris/cs), [English](https://icd.who.int/doris/en), [French](https://icd.who.int/doris/fr), [Kazakh](https://icd.who.int/doris/kk), [Portuguese](https://icd.who.int/doris/pt), [Russian](https://icd.who.int/doris/ru),
- [Slovak](https://icd.who.int/doris/sk), [Spanish](https://icd.who.int/doris/es), [Swedish](https://icd.who.int/doris/sv), [Turkish](https://icd.who.int/doris/tr), and [Uzbek](https://icd.who.int/doris/uz). 
+Es compatible con los 13 idiomas oficiales de la CIE-11: [árabe](https://icd.who.int/doris/ar), [chino](https://icd.who.int/doris/zh), [checo](https://icd.who.int/doris/cs), [eslovaco](https://icd.who.int/doris/sk), [español](https://icd.who.int/doris/es), [francés](https://icd.who.int/doris/fr), [inglés](https://icd.who.int/doris/en), [kazajo](https://icd.who.int/doris/kk), [portugués](https://icd.who.int/doris/pt), [ruso](https://icd.who.int/doris/ru), [sueco](https://icd.who.int/doris/sv), [turco](https://icd.who.int/doris/tr) y [uzbeko](https://icd.who.int/doris/uz). 
 
-To switch between languages use the language key at the top right corner of the screen. 
+Para cambiar de idioma, utilice el botón de idioma situado en la esquina superior derecha de la pantalla. 
 
-![DORIS Web screenshot picture ](img/DORISwebjune25.png){: style="width:40%"}
+![Imagen de captura de pantalla de DORIS versión en línea ](img/DORISwebjune25.png){: style="width:40%"}
 
-Provide the required information about the deceased individual.
+Proporcione la información requerida sobre la persona fallecida.
 
-**Administrative Data**: Fill in the following details - Sex, Date of Birth, Date of Death, and Estimated Age (in years, months, weeks, days, hours, minutes, or seconds), or leave it unknown.
+**Datos administrativos**: Complete los siguientes campos: sexo, fecha de nacimiento, fecha de defunción y edad estimada (en años, meses, semanas, días, horas, minutos o segundos), o seleccione «desconocido».
 
-![Administrativedatascreenshot picture ](img/administrativedatascreenshotupdated.png){: style="width:40%"}
+![Administrativedatoscaptura de pantalla imagen ](img/administrativedatascreenshotupdated.png){: style="width:40%"}
 
-In Frame A, the **Medical Data** fields are associated with the ICD-11 coding tool, allowing users to search by term or by ICD-11 code.
+En la sección A, los campos de **Datos médicos** están vinculados a la herramienta de codificación de la CIE-11, lo que permite a los usuarios buscar por término o por código de la CIE-11.
 
-Part 1: Cause(s) of Death - Complete Line a, b, c, and d along with their respective time intervals. 
+Parte 1: Causa(s) de defunción. Complete las líneas a, b, c y d junto con sus intervalos de tiempo correspondientes. 
 
-Part 2:  Indicate any other significant conditions contributing to the death, along with their corresponding time intervals. In this section, time intervals can be assigned separately for each reported condition. To do so, users need to search for the condition by term or ICD-11 code using the coding tool then assign the relevant time interval after selecting the condition.
+Parte 2: Indique otras condiciones importantes que contribuyeron a la defunción, junto con sus intervalos de tiempo correspondientes. En esta sección, pueden asignarse distintos intervalos de tiempo a cada afección. Para ello, el usuario debe buscar el término o código de la CIE-11 usando la herramienta de codificación y, a continuación, asignar el intervalo de tiempo correspondiente.
 
 ![FrameAmedicaldatascreenshotpicture ](img/FrameAmedicaldatascreenshotupdated.png){: style="width:40%"}
 
-Frame B consists of the following fields:
+La sección B consta de los siguientes campos:
 
-**Details of Surgery**: Provide any relevant information about surgeries performed on the deceased by answering the questions.
+**Cirugía**: Proporcione toda la información relevante sobre las intervenciones quirúrgicas practicadas al fallecido.
 
 ![surgeryscreenshotpicture ](img/surgeryandautopsyscreenshot.png){: style="width:40%"}
 
-**Manner of Death**: Specify the manner in which the death occurred (e.g., natural, accident, suicide, homicide).
+**Manera de morir**: Especifique cómo se produjo la defunción (por ejemplo, si fue por una enfermedad, accidente, lesión autoinfligida, agresión).
 
 ![Mannerofdeathscreenshotpicture ](img/manneofdeathscreenshotupdated.png){: style="width:40%"}
 
-**Place of occurrence** of the external cause: specify the place where the external cause (e.g., accident, injury) occurred. This information is essential for accurately documenting the circumstances surrounding the death.
+**Lugar de ocurrencia** de la causa externa: Especifique el lugar donde se produjo la causa externa (por ejemplo, en casos de accidente o lesión). Esta información es esencial para documentar con precisión las circunstancias en las que se produjo la defunción.
 
-**Fetal or Infant Death**: Fill in the needed information on multiple pregnancy, stillbirth specifying the number of hours survived if applicable, the birth weight, the number of completed weeks of pregnancy, the age of the mother and if the death was perinatal, the conditions of the mother that affected the fetous should be specified. 
+**Muerte fetal o infantil**: Complete los datos requeridos sobre embarazo múltiple o muerte fetal, especificando el número de horas de vida si procede, el peso al nacer, el número de semanas completas de embarazo y la edad de la madre. Si la muerte fue perinatal, anote las condiciones de la madre que afectaron al feto y neonato. 
 
 ![fetalinfantdeathscreenshotpicture ](img/fetalinfantdeathscreenshotupdated.png){: style="width:40%"}
 
-For women: 
+En el caso de las mujeres: 
 
-**Pregnancy Status**: Was the deceased pregnant at the time of death? Choose the appropriate option. 
+**Estado respecto al embarazo**: ¿La fallecida estaba embarazada en el momento de la defunción? Elija la opción correcta. 
 
-**Time from Pregnancy**: If the deceased individual was pregnant, provide the time from pregnancy.
+**Tiempo desde el embarazo**: Si la persona fallecida estaba embarazada, indique el tiempo transcurrido desde el embarazo.
 
-**Contribution of Pregnancy to Death**: Determine if the pregnancy played a role in the woman's death. 
+**Contribución del embarazo a la muerte**: Especifique si el embarazo influyó en la defunción de la mujer. 
 
 ![pregnancyscreenshotpicture ](img/pregnancyscreenshotupdated.png){: style="width:40%"}
 
-To demonstrate the functionality of the DORIS web version, an **examples form** key provides a few examples to showcase how the web version operates. Users can refer to these examples to understand how to use the web version effectively.
+El botón **formulario de ejemplos** proporciona casos que demuestran cómo funciona la versión en línea de DORIS. Los usuarios pueden consultar estos casos demuestra para saber cómo utilizar la versión en línea.
 
-Additionally, the **clear content** key was introduced. By clicking on this key, users can initiate a fresh death certificate with all the fields cleared, allowing them to start with a new entry without any existing data.
+Además, se agregó un botón de **borrar contenido**. Al hacer clic en este botón, los usuarios pueden iniciar un nuevo certificado de defunción con todos los campos vacíos, y así iniciar una nueva entrada sin datos previos.
 
-To process the required Underlying Cause of Death (UCOD), users should simply click on the '**Process**' button. This action will generate the necessary information based on the entered data, helping users select the underlying cause of death.
+Para procesar la causa básica de defunción, los usuarios simplemente deben hacer clic en el botón "**Procesar**". Esta acción generará la información necesaria en función de los datos introducidos, ayudando a los usuarios a seleccionar la causa básica de defunción.
 
-It is possible to fill in and process several Medical Certificates of Cause of Death MCCDs in the same session using the web version. To view the result of a specific certificate, go to the "Browse MCCDs" section at the top right and click on the relevant MCCD to display its processing details.
+Es posible completar y procesar varios Certificados Médicos de Causa de Defunción (CMCD) en una misma sesión mediante la versión en línea. Para consultar el resultado de un certificado concreto, diríjase a la sección "Explorar CMCD" en la parte superior derecha de la pantalla y haga clic sobre el CMCD correspondiente para visualizar los datos.
 
-![browsemccds](img/browsemccds.png){: style="width:30%"}
+![browsemccds{](img/browsemccds.png): style="width:30%"}
 
-**Output section** 
+**Sección de resultados** 
 
-Once the Underlying Cause of Death (UCOD) is selected, it will be presented in the **output** section which includes two distinct fields related to the **underlying cause of death.** The first field represents the single underlying cause of death that was selected based on the information provided and is highlighted in yellow to draw the attention of the users. Additionally, if available, the output section also includes a field for the **cluster underlying cause of death**. This field indicates the postcoordinated codes if applicable providing further context and details. 
+Una vez seleccionada la **causa básica de** defunción, se presentará en la sección de **resultados**, que incluye dos campos relacionados con la **causa básica de defunción.** El primer campo representa la causa básica única de defunción seleccionada a partir de la información facilitada y se resalta en amarillo para llamar la atención de los usuarios. Además, si está disponible, la sección de resultados también incluye un campo para la codificación en grupos (clusters) con múltiples **causas de defunción**. Este campo indica los códigos poscoordinados, si procede, lo que aporta mayor contexto y más detalles. 
 
-![outputdetailedexplanationsscreenshotpicture](img/outputdetailedexplanationscreenshot.png){: style="width:40%"}
+![outputdetailedexplanationsscreenshotpicture{](img/outputdetailedexplanationscreenshot.png): style="width:40%"}
 
-The DORIS tool provides four complementary visualization modes to support review, validation, and training:
+DORIS ofrece cuatro modos de visualización complementarios para apoyar la revisión, la validación y la capacitación:
 
-**Textual Report**: This visualization illustrates the steps and mortality rules that were applied in the selection of the underlying cause of death. The report includes a **warnings** field, which flags any inconsistencies in the reported information or suggests the need for manual verification. The warnings are displayed in yellow. Following the warnings, a concise report outlines the main steps that were applied. For a more detailed understanding, a full report is also included in the output section. This comprehensive report provides a thorough explanation of the sequence followed, along with detailed information about the mortality rules and steps that were applied or not during the selection of the underlying cause of death.
+**Reporte textual**: Esta visualización ilustra los pasos y las reglas de mortalidad que se aplicaron para seleccionar la causa básica de defunción. Incluye un campo de **advertencias**, que señala cualquier incoherencia en la información proporcionada o sugiere la necesidad de una verificación manual. Las advertencias se muestran en amarillo. Después de las advertencias, se presenta un informe conciso que resume los principales pasos aplicados. En la sección de resultados también se presenta un informe completo, para una comprensión más profunda.  Este informe exhaustivo ofrece una explicación completa de la secuencia seguida, junto con información detallada sobre las reglas de mortalidad y los pasos que se aplicaron o no durante la selección de la causa básica de defunción.
 
-![Textualreportview](img/textualreport.png){: style="width:40%"}
+![Textualreportview{](img/textualreport.png): style="width:40%"}
 
-**Tabular Report:** This interactive visualization displays the steps for UCOD selection in a tabular format. Clicking on the rows allows to follow the steps one after the other from top to bottom and accordingly the rules applied will be highlighted on the certificate
+**Reporte tabular:** En esta visualización interactiva se muestran los pasos para la selección de la causa básica de defunción en forma de tabla. Haciendo clic en las filas se pueden seguir los pasos uno tras otro, de arriba a abajo, y las reglas aplicadas se resaltarán en el certificado
 
-![Tabularreportview](img/Tabularreport.png){: style="width:40%"}
+![Tabularreportview{](img/Tabularreport.png): style="width:40%"}
 
-**Rule Flow Report:**  This visualization displays the report as a sequence of applied rules ultimately leading to the selected UCOD.
+**Reporte de flujo de reglas:** Esta visualización muestra el informe como una secuencia de reglas aplicadas que conducen finalmente a la causa básica de defunción seleccionada.
 
-![Ruleflowreportview](img/Ruleflowreport.png){: style="width:40%"}
+![Ruleflowreportview{](img/Ruleflowreport.png): style="width:40%"}
 
-**Rule Sequence Report:** This visualization displays the report as a horizontal sequence. The specific rules applied at each step are listed below showing the order in which the rules were applied from top to bottom.
+**Reporte de secuencia de reglas:** Esta visualización del informe se muestra como una secuencia horizontal. Las reglas específicas aplicadas en cada paso se muestran en el orden en que se aplicaron, de la parte superior a la inferior de la pantalla.
 
-![Rulesequencereportview](img/Rulesequencereport.png){: style="width:40%"}
+![Rulesequencereportview{](img/Rulesequencereport.png): style="width:40%"}
 

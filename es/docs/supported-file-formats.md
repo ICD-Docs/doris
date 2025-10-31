@@ -1,9 +1,9 @@
-# Supported Import File Formats
+# Formatos de archivo compatibles con la importación
 
-DORIS Desktop supports importing files in standard JSON, Excel or in CSV formats. Detailed explanations of these formats could be found at the links below
-## [Standard JSON Format](json-format.md)
+La versión de escritorio de DORIS (DORIS Desktop) admite la importación de archivos en formato JSON estructurado, Excel o CSV. En los siguientes enlaces encontrará explicaciones detalladas de cada uno de estos formatos:
+## [Formato JSON estructurado](json-format.md)
 
-## [Tabular Format (Excel, CSV)](csv-excel-format.md)
+## [Formato tabular (Excel, CSV)](csv-excel-format.md)
 
 
 
