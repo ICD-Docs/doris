@@ -1,11 +1,17 @@
-# Notas de la versión de DORIS versión de escritorio
+# Notas de la versión de escritorio
 
 ## Version 1.1
 - Se ha implementado la versión 1.1 de las reglas DORIS.
     - **Nuevas funciones de visualización mejoradas**  
-          Además del **reporte textual**, se han añadido **tres nuevos modos de visualización**: - **Reporte tabular**: Vista interactiva en forma de tabla que muestra los pasos de selección de la causa básica de defunción. El usuario puede seguir los pasos de forma secuencial, resaltando en el certificado las reglas correspondientes. - **Reporte de flujo de reglas**: Muestra visualmente la secuencia de reglas aplicadas que condujeron a la selección de la causa básica de defunción. - **Reporte de secuencia de reglas**: Presenta una línea de tiempo horizontal con las reglas aplicadas, en el orden en que fueron aplicadas.
+          Además del **reporte textual**, se han añadido **tres nuevos modos de visualización**:
+      - **Reporte tabular**: Vista interactiva en forma de tabla que muestra los pasos de selección de la causa básica de defunción. El usuario puede seguir los pasos de forma secuencial, resaltando en el certificado las reglas correspondientes.
+      - **Reporte de flujo de reglas**: Muestra visualmente la secuencia de reglas aplicadas que condujeron a la selección de la causa básica de defunción.
+      - **Reporte de secuencia de reglas**: Presenta una línea de tiempo horizontal con las reglas aplicadas, en el orden en que fueron aplicadas.
     - **Mejora de la precisión del algoritmo**  
-      Esta versión incorpora mejoras en el algoritmo de DORIS que aumentan la precisión y coherencia en la codificación y notificación de causas de defunción. - Mayor especificidad para enfermedades infecciosas, neoplasias y afecciones relacionadas con traumatismos. - Mejora en la lógica aplicada al VIH, la tuberculosis y los trastornos debidos al uso de sustancias. - Mejor tratamiento de causas externas y defunciones relacionadas con traumatismos.
+      Esta versión incorpora mejoras en el algoritmo de DORIS que aumentan la precisión y coherencia en la codificación y notificación de causas de defunción.
+      - Mayor especificidad para enfermedades infecciosas, neoplasias y afecciones relacionadas con traumatismos.
+      - Mejora en la lógica aplicada al VIH, la tuberculosis y los trastornos debidos al uso de sustancias.
+      - Mejor tratamiento de causas externas y defunciones relacionadas con traumatismos.
      - **Ya está disponible la versión para macOS**  
       Mayor compatibilidad para usuarios de sistemas Apple.
        
