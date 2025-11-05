@@ -9,7 +9,7 @@ El software DORIS versión de escritorio puede descargarse en el siguiente enlac
 	- Enlace de descarga para Mac arm64: [DorisDesktop-1.1.7\_arm64.pkg](https://icdcdn.who.int/doris/DorisDesktop-1.1.7_arm64.pkg)
 
 
-	Si está interesado en utilizar la versión para Windows ARM64 del software, póngase en contacto con nosotros escribiendo a **icd@who.int**.
+	Si le interesa utilizar la versión para Windows ARM64 del software, póngase en contacto con nosotros escribiendo a **icd@who.int**.
 
 
 
