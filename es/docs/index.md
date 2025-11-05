@@ -13,14 +13,14 @@ La capacidad de **DORIS** para procesar miles de certificados de defunción en m
 
 **DORIS** es compatible con diez idiomas de la CIE-11: [árabe](https://icd.who.int/doris/ar), [chino](https://icd.who.int/doris/zh), [checo](https://icd.who.int/doris/cs), [español,](https://icd.who.int/doris/es) [francés](https://icd.who.int/doris/fr), [inglés](https://icd.who.int/doris/en), [portugués](https://icd.who.int/doris/pt), [ruso](https://icd.who.int/doris/ru), [turco](https://icd.who.int/doris/tr) y [uzbeko](https://icd.who.int/doris/uz).
 
-  - **DORIS versión en línea** es una aplicación web accesible a través de un navegador. Aplica las reglas de mortalidad de la CIE para seleccionar la causa de defunción en certificados individuales. Puede acceder a la versión en línea [aquí](https://icd.who.int/doris/workspace/en)
+  - **DORIS versión en línea** es una aplicación web accesible a través de un navegador. Aplica las reglas de mortalidad de la CIE para seleccionar la causa de defunción en certificados individuales. Puede acceder a la versión en línea [aquí](https://icd.who.int/doris/workspace/es).
 
-  > [Más información sobre la versión en línea](doris-web.md)
+  > [Más información sobre la versión en línea](doris-web.md).
 
   - **DORIS versión de escritorio**, para el procesamiento por lotes, es un software de escritorio que puede instalarse en ordenadores locales. Está diseñada para permitir el procesamiento por lotes de grandes volúmenes de certificados de defunción de forma sencilla. Ya sea en modo texto o en modo codificado, este software analiza miles de certificados de defunción y admite varios formatos: Excel, CSV y JSON.
- > [Más información sobre la versión de escritorio](doris-desktop-user-guide.md)
+ > [Más información sobre la versión de escritorio](doris-desktop-user-guide.md).
   
   - **Integración con otros sistemas o aplicaciones:** Además del software mencionado, puede acceder a DORIS a través de **la API de la CIE** (interfaz de programación de aplicaciones). Esta función facilita la integración con otros sistemas o aplicaciones.
-> [Más información sobre el uso de DORIS a través de la API de la CIE (ICD-API)](doris-api.md)
+ > [Más información sobre el uso de DORIS a través de la API de la CIE (ICD-API)](doris-api.md).
 
   ![dorishomepagepicture ](img/DORIShompage24updated.png)
