@@ -80,5 +80,5 @@ DORIS ofrece cuatro modos de visualización complementarios para apoyar la revis
 
 **Reporte de secuencia de reglas:** Esta visualización del informe se muestra como una secuencia horizontal. Las reglas específicas aplicadas en cada paso se muestran en el orden en que se aplicaron, de la parte superior a la inferior de la pantalla.
 
-![Rulesequencereportview{](img/Rulesequencereport.png){: style="width:40%"}
+![Rulesequencereportview{](img/Rulesequencereport.png)
 
