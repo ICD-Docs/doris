@@ -1,6 +1,6 @@
 ﻿# Formato tabular simple de intercambio de certificados de defunción
 
-Se trata de un formato específico utilizado por [DORIS](https://icd.who.int/doris) como alternativa tabular sencilla al [formato JSON estructurado](json-format.md).
+Se trata de un formato específico utilizado por [DORIS](https://icd.who.int/doris/es) como alternativa tabular sencilla al [formato JSON estructurado](json-format.md).
 
 Este formato puede usarse como un archivo de Excel (.xlsx) o como archivo de texto separado por comas (.csv). 
 
@@ -18,32 +18,37 @@ A continuación se describen detalladamente los campos:
 
 Los tipos de datos utilizados son:
 
-| Tipo | Descripción | | --- | --- | | `string` | en archivos CSV, los valores alfanuméricos deben ir entre comillas `"`. | | `integer` | Campo numérico, se permiten solo números enteros | | `boolean` | Los valores permitidos son `true` y `false` | | `date` | El campo de fecha del certificado usa el formato definido por la [W3C](https://www.w3.org/TR/NOTE-datetime). En archivos CSV, el valor de la fecha debe ir entre comillas `"`. | | `durations` | Las duraciones definen la cantidad de tiempo transcurrido en un intervalo de tiempo usado en el certificado para el campo de intervalo. El formato está definido en la [norma ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#Durations). En archivos CSV, el valor de duración debe ir entre comillas `"`.|
+| Tipo | Descripción | | --- | --- | 
+| `string` | en archivos CSV, los valores alfanuméricos deben ir entre comillas `"`. | 
+| `integer` | Campo numérico, se permiten solo números enteros | 
+| `boolean` | Los valores permitidos son `true` y `false` | 
+| `date` | El campo de fecha del certificado usa el formato definido por la [W3C](https://www.w3.org/TR/NOTE-datetime). En archivos CSV, el valor de la fecha debe ir entre comillas `"`. | 
+| `durations` | Las duraciones definen la cantidad de tiempo transcurrido en un intervalo de tiempo usado en el certificado para el campo de intervalo. El formato está definido en la [norma ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#Durations). En archivos CSV, el valor de duración debe ir entre comillas `"`.|
 
 Ejemplo de fecha:
 
 ```
-    Year:
-        YYYY (eg 1997)  
-    Year and month:  
-        YYYY-MM (eg 1997-07)  
-    Complete date:  
-        YYYY-MM-DD (eg 1997-07-16)  
-    Complete date plus hours and minutes:  
-        YYYY-MM-DDThh:mmTZD (eg 1997-07-16T19:20+01:00)  
-    Complete date plus hours, minutes and seconds:  
-        YYYY-MM-DDThh:mm:ssTZD (eg 1997-07-16T19:20:30+01:00)  
-    Complete date plus hours, minutes, seconds and a decimal fraction of a second  
-        YYYY-MM-DDThh:mm:ss.sTZD (eg 1997-07-16T19:20:30.45+01:00)
-where:
-     YYYY = four-digit year
-     MM   = two-digit month (01=January, etc.)
-     DD   = two-digit day of month (01 through 31)
-     hh   = two digits of hour (00 through 23) (am/pm NOT allowed)
-     mm   = two digits of minute (00 through 59)
-     ss   = two digits of second (00 through 59)
-     s    = one or more digits representing a decimal fraction of a second
-     TZD  = time zone designator (Z or +hh:mm or -hh:mm)
+    Año:
+        YYYY (ej. 1997)  
+    Año y mes:  
+        YYYY-MM (ej. 1997-07)  
+    Fecha completa:  
+        YYYY-MM-DD (ej. 1997-07-16)  
+    Fecha completa más horas y minutos:  
+        YYYY-MM-DDThh:mmTZD (ej. 1997-07-16T19:20+01:00)  
+    Fecha completa más horas, minutos y segundos:  
+        YYYY-MM-DDThh:mm:ssTZD (ej. 1997-07-16T19:20:30+01:00)  
+    Fecha completa más horas, minutos, segundos y fracción decimal de un segundo:  
+        YYYY-MM-DDThh:mm:ss.sTZD (ej. 1997-07-16T19:20:30.45+01:00)
+donde:
+     YYYY = año en cuatro dígitos
+     MM   = mes en dos dígitos (01=enero, etc.)
+     DD   = día del mes en dos dígitos (01 al 31)
+     hh   = hora en dos dígitos (00 al 23) (NO está permitido usar am/pm)
+     mm   = minuto en dos dígitos (00 al 59)
+     ss   = segundo en dos dígitos (00 al 59)
+     s    = uno o más dígitos para la fracción decimal de un segundo 
+     TZD  = designador de zona horaria (Z o +hh:mm o -hh:mm)
 ```
 
 Ejemplo de duración:
@@ -55,7 +60,7 @@ Para evitar ambigüedades, "P1M" representa una duración de un mes y "PT1M" rep
 Ejemplos prácticos: “PT10S” indica una duración de diez segundos, “PT10M” indica una duración de diez minutos, “PT10H” indica una duración de diez horas, “P5D” indica una duración de cinco días, “P2W” indica una duración de dos semanas, “P10M” indica una duración de diez meses y “P10Y” indica una duración de diez años. “”, “P” o “PT” se utilizan para intervalos desconocidos. \`\`\`
 
 ```
-Note: CauseOfDeath fields can be provided either as code, URI or text. we have individual columns for them. Having just one of them is necessary. 
+Note: Los campos CauseOfDeath pueden presentarse como código, URI o texto. Tenemos columnas individual para estos campos. Hay que tener uno de ellos. 
 ```
 
 ## Descripción
