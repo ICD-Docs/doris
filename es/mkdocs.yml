@@ -1,4 +1,4 @@
-site_name: DORIS Homepage
+site_name: DORIS: Inicio
 
 theme:
     name: null
@@ -26,16 +26,16 @@ markdown_extensions:
 
 nav:
     - DORIS:
-        - General Information: 'index.md'
-        - Mortality digital end-to-end solution: 'icd11mde2e.md'
-        - Overview: 'overview.md'
-    - Web Version: 
-        - Doris Web: 'doris-web.md'
-    - DORIS Desktop: 
-        - Release Notes: 'doris-desktop-release-notes.md'
-        - Download and Installation: 'doris-desktop-download-installation.md'
-        - Using DORIS Desktop: 'doris-desktop-user-guide.md'
-        - Supported File Formats: 'supported-file-formats.md'
-    - Using DORIS from other software: 
-        - Using DORIS from ICD-API: 'doris-api.md'
+        - Información general: 'index.md'
+        - Solución integral de la CIE-11: 'icd11mde2e.md'
+        - Resumen: 'overview.md'
+    - Versión en línea: 
+        - Doris en línea: 'doris-web.md'
+    - Versión de escritorio: 
+        - Notas de la versión: 'doris-desktop-release-notes.md'
+        - Descarga e instalación: 'doris-desktop-download-installation.md'
+        - Guía para el usuario: 'doris-desktop-user-guide.md'
+        - Formatos de archivos: 'supported-file-formats.md'
+    - Uso de DORIS desde otro software: 
+        - Uso de DORIS desde la API de la CIE: 'doris-api.md'
 
