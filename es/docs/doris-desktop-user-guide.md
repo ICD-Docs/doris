@@ -102,11 +102,11 @@ DORIS ofrece cuatro modos de visualización complementarios para brindar apoyo e
 
 ![Tabularreport](img/tabularreportdesktop.png)
 
-**Reporte de flujo de reglas:** En esta visualización se muestra el informe como una secuencia de reglas aplicadas que conducen finalmente a la causa básica de defunción seleccionada.
+**Informe de flujo de reglas:** En esta visualización se muestra el informe como una secuencia de reglas aplicadas que conducen finalmente a la causa básica de defunción seleccionada.
 
 ![Ruleflowreport](img/Ruleflowreportdesktop.png)
 
-**Reporte de secuencia de reglas:** Esta visualización del informe se muestra como una secuencia horizontal. Las reglas específicas aplicadas en cada paso se muestran en el orden en que se aplicaron, de la parte superior a la inferior de la pantalla.
+**Informe de secuencia de reglas:** Esta visualización del informe se muestra como una secuencia horizontal. Las reglas específicas aplicadas en cada paso se muestran en el orden en que se aplicaron, de la parte superior a la inferior de la pantalla.
 
 ![Rulesequencereport](img/Rulesequencereportdesktop.png)
 
