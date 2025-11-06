@@ -5,8 +5,8 @@
     - **Mejoras en la visualización**  
           Además del **reporte textual**, se han añadido **tres nuevos modos de visualización**:
       - **Reporte tabular**: Es una vista interactiva en forma de tabla que muestra los pasos de selección de la causa básica de defunción. El usuario puede seguir los pasos de forma secuencial, resaltando en el certificado las reglas correspondientes.
-      - **Reporte de flujo de reglas**: Muestra visualmente la secuencia de reglas aplicadas que condujeron a la selección de la causa básica de defunción.
-      - **Reporte de secuencia de reglas**: Presenta una línea de tiempo horizontal con las reglas aplicadas, en el orden en que fueron aplicadas.
+      - **Informe de flujo de reglas**: Muestra visualmente la secuencia de reglas aplicadas que condujeron a la selección de la causa básica de defunción.
+      - **Informe de secuencia de reglas**: Presenta una línea de tiempo horizontal con las reglas aplicadas, en el orden en que fueron aplicadas.
     - **Mejora de la precisión del algoritmo**  
       Esta versión incorpora mejoras en el algoritmo de DORIS que aumentan la precisión y coherencia en la codificación y notificación de causas de defunción.
       - Mayor especificidad para enfermedades infecciosas, neoplasias y afecciones relacionadas con lesiones y traumatismos.
