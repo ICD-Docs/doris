@@ -6,17 +6,17 @@ El objetivo principal de este formato es crear una representación electrónica 
 
 El **certificado de defunción** se define en formato *JSON*. 
 
-[El esquema JSON para un único certificado de defunción se encuentra aquí](Annex_ElectronicDeathCertificateSchema.json) 
+[El esquema JSON para un certificado de defunción (uno solo) se encuentra aquí](Annex_ElectronicDeathCertificateSchema.json) 
 
 
-## Panorama general
+## Resumen
 
-En este documento se enumeran todos los campos del certificado junto con su descripción, tipo de dato y valores permitidos. Para algunos campos que solo pueden contener valores específicos, se especifica la correspondencia que indica dónde debe utilizarse el valor numérico en el certificado. 
+En este documento se presentan todos los campos del certificado junto con su descripción, tipo de dato y valores permitidos. Para algunos campos que solo pueden contener valores específicos, se especifica la correspondencia que indica dónde debe utilizarse el valor numérico en el certificado. 
 
 Por ejemplo, cuando los valores posibles son “sí”, “no” y “desconocido”, establecemos la correspondencia:
 > - _no_ -> 0, 
 > - _sí_ -> 1, 
-> - _se desconoce_ -> 9. 
+> - _desconocido_ -> 9. 
 
 Se utiliza `\` (barra invertida) para identificar las estructuras anidadas.
 
@@ -30,9 +30,9 @@ Se utilizan los siguientes tipos de datos:
 | `string` | Valor alfanumérico entrecomillado `"`. | 
 | `integer` | Campo numérico; solo se permiten números enteros | 
 | `boolean` | Los valores permitidos son `true` y `false` | | `structure` | Estructura _JSON_ con otros campos en su interior | 
-| `array[type]` | Una lista de un tipo específico; en nuestro formato solo utilizamos listas de otras estructuras (es decir, <i>array</i> de `[ {"name": "The name"}, {"name": "Other example name name"} ]` | 
+| `array[type]` | Una lista de un tipo específico; en nuestro formato solo utilizamos listas de otras estructuras (es decir, matriz o <i>array</i> de `[ {"name": "The name"}, {"name": "Other example name name"} ]` | 
 | `date` | El campo de fecha utilizado en el certificado sigue el formato definido por el [W3C](https://www.w3.org/TR/NOTE-datetime). La fecha debe colocarse entre comillas `"`. | 
-| `duration` | Las duraciones definen la cantidad de tiempo transcurrido en un intervalo temporal, tal como se utiliza en el certificado para el campo de intervalo. El formato está definido en la [norma ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#Durations). El valor de duración debe colocarse entre comillas `"`.|
+| `duration` | Las duraciones definen la cantidad de tiempo transcurrido en un intervalo temporal, tal como se utiliza en el certificado para el campo de intervalo. El formato está definido en la [norma ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#Durations). El valor correspondiente a la duración debe colocarse entre comillas `"`.|
 
 Ejemplo de fecha:
 
@@ -88,57 +88,57 @@ Ejemplos prácticos: “PT10S” indica una duración de diez segundos, “PT10M
 | Atributo | Tipo | Descripción |
 | :- | :- | --- |
 | `Part1` | `[line structure]` | Lista de _estructuras de línea_ para cada línea de la Parte 1 |
-| `Part2` | `line structure` | _Estructura de línea_ que contiene todas las condiciones de la Parte 2 |
+| `Part2` | `line structure` | _Estructura de línea_ que contiene todas las condiciones o problemas de salud de la Parte 2 |
 
 
-#### Estructura de condición individual
+#### Estructura de haber una sola condición o problema de salud
 
 | Atributo | Tipo | Descripción |
 | :- | :- | --- |
-| `Text` | `string` | Descripción textual o condición indicada por el certificador. |
-| `Code` | `string` | Código de clasificación. (Para la CIE-11 se permite el uso de poscoordinación, es decir: "Código de base A & Código de extensión 1 / Código de base B"). |
-| `LinearizationURI` | `string` | Solo se usa para la CIE-11. La URI de linealización puede contener poscoordinación (URI de código de base A & URI de código de extensión 1 / URI de código de base B). |
-| `FoundationURI` | `string` | Solo se utiliza para la URI de Fundación de la CIE‑11 cuando la URI de Linealización no es suficiente para reflejar el nivel de detalle requerido, con posible poscoordinación (URI de código base A & URI de código de extensión 1 / URI de código de base B). |
+| `Text` | `string` | Descripción textual o condición/problema de salud indicado por el certificador. |
+| `Code` | `string` | Código de clasificación. (Para la CIE-11 se permite el uso de poscoordinación, es decir: "código de base A y código de extensión 1 / código de base B"). |
+| `LinearizationURI` | `string` | Solo se usa para la CIE-11. El URI de linealización puede contener poscoordinación (URI de código de base A y URI de código de extensión 1 / URI de código de base B). |
+| `FoundationURI` | `string` | Solo se utiliza para el URI del componente fundamental (la fundación) de la CIE‑11 cuando el URI de linealización no es suficiente para reflejar el nivel de detalle requerido, con posible poscoordinación (URI de código base A y URI de código de extensión 1 / URI de código de base B). |
 | `Interval` | `duration` | Intervalo de tiempo desde el inicio hasta la muerte. |
 |  |  | Los campos anteriores (código y URI) deben usarse si el certificado contiene información codificada. En el caso de un certificado codificado, uno de los tres es suficiente, pero un certificado puede tener varios completados.
 
 
 
-#### Estructura de línea
+#### Estructura de las líneas
 
 | Atributo | Tipo | Descripción |
 | --- | --- | --- |
-| `Conditions` | `[Single condition structure]` | array de condiciones en una sola línea de la Parte 1 |
+| `Conditions` | `[Single condition structure]` | Matriz (<i>array</i>) de condiciones o problemas de salud en una sola línea de la Parte 1 |
 
 
 | Atributo | Tipo | Descripción |
 | --- | :- | --- |
 | `Surgery` | `structure` | Se utiliza cuando se ha realizado una cirugía. Complete los campos anidados. |
 | `Surgery\WasPerformed` | `integer` | "¿Se realizó una cirugía en las últimas 4 semanas?" |
-| `Surgery\Date` | `date` | Si se realizó una cirugía, especifique la fecha. `Surgery\Reason` `string` | Si la respuesta es _Sí_, especifique el motivo de la cirugía (enfermedad o afección). |
+| `Surgery\Date` | `date` | Si se realizó una cirugía, especifique la fecha. `Surgery\Reason` `string` | Si la respuesta es _Sí_, especifique el motivo de la cirugía (enfermedad o problema de salud). |
 
 > `Surgery\WasPerformed` valores de correspondencia:  
 > \- 0 <- No  
 > \- 1 <- Sí - 9 <- Desconocido
 
 
-Los siguientes campos forman una estructura anidada utilizada para indicar la línea de condición del certificado. Se utilizan en campos como `Part1` y `Part2` 
+Los siguientes campos forman una estructura anidada utilizada para indicar la línea de condición/problema de salud del certificado. Se utilizan en campos como `Part1` y `Part2` 
 
 
 | Atributo | Tipo | Descripción |
 | --- | :-: | --- |
 | `Autopsy` | `structure` | Si se solicitó una autopsia, complete los campos anidados. |
-| `Autopsy\WasRequested` | `integer` | "¿Se solicitó una autopsia?". | | `Autopsy\Findings` | `integer` | "En caso afirmativo, ¿se utilizaron los hallazgos en la certificación?". |
+| `Autopsy\WasRequested` | `integer` | "¿Se solicitó una autopsia?". | | `Autopsy\Findings` | `integer` | "Si la respuesta es 'sí', ¿se utilizaron los hallazgos en la certificación?". |
 
- `Autopsy\WasRequested` valores de correspondencia:  
+ `Autopsy\WasRequested` Valores de correspondencia:  
 > - 0 <- No
 > - 1 <- Sí
-> - 9 <- Se desconoce
+> - 9 <- Desconocido
 
  `Autopsy\Findings` valores de correspondencia:  
 > - 0 <- No
 > - 1 <- Sí
-> - 9 <- Se desconoce
+> - 9 <- Desconocido
 
 | Atributo | Tipo | Descripción |
 | --- | :-: | --- |
@@ -148,7 +148,7 @@ Los siguientes campos forman una estructura anidada utilizada para indicar la l�
 | `MannerOfDeath\DescriptionExternalCause` | `string` | |
 | `MannerOfDeath\PlaceOfOccuranceExternalCause` | `integer` | |
 
- `MannerOfDeath\MannerOfDeath` valores de correspondencia:  
+ `MannerOfDeath\MannerOfDeath` Valores de correspondencia:  
 > - 0 <- Enfermedad
 > - 1 <- Accidente
 > - 2 <- Lesión autoinfligida intencionalmente
@@ -182,12 +182,12 @@ Los siguientes campos forman una estructura anidada utilizada para indicar la l�
 | `FetalOrInfantDeath\AgeMother` | `integer` | |
 | `FetalOrInfantDeath\PerinatalDescription` | `string` | |
 
- `FetalOrInfantDeath\MultiplePregnancy` valores de correspondencia:  
+ `FetalOrInfantDeath\MultiplePregnancy` Valores de correspondencia:  
 > - 0 <- No
 > - 1 <- Sí
 > - 9 <- Desconocido
 
- `FetalOrInfantDeath\Stillborn` valores de correspondencia:  
+ `FetalOrInfantDeath\Stillborn` Valores de correspondencia:  
 > - 0 <- No
 > - 1 <- Sí
 > - 9 <- Desconocido
@@ -204,21 +204,21 @@ Los siguientes campos forman una estructura anidada utilizada para indicar la l�
 > - 1 <- Sí
 > - 9 <- Desconocido
 
- `MaternalDeath\TimeFromPregnancy` valores de correspondencia:  
+ `MaternalDeath\TimeFromPregnancy` Valores de correspondencia:  
 > - 0 <- En el momento de la muerte
 > - 1 <- Dentro de los 42 días antes de la muerte
 > - 2 <- Entre 43 días y hasta 1 año antes de la muerte
 > - 3 <- Un año o más antes de la muerte
 > - 9 <- Desconocido
 
- `MaternalDeath\PregnancyContribute` valores de correspondencia:  
+ `MaternalDeath\PregnancyContribute` Valores de correspondencia:  
 > - 0 <- No
 > - 1 <- Sí
 > - 9 <- Desconocido
 
 
-## Array de certificados
-Aunque ya hemos visto el formato del certificado de defunción, el archivo con los certificados necesita un array de certificados, que en JSON se crea utilizando corchetes: `[`certificado`,` certificado`,`...`,` certificado`]` 
+## Matriz (<i>array</i>) de certificados
+Aunque ya hemos visto el formato del certificado de defunción, el archivo con los certificados necesita una matriz (<i>array</i>) de certificados, que en JSON se crea utilizando corchetes: `[`certificado`,` certificado`,`...`,` certificado`]` 
 
 ## Ejemplo
 
