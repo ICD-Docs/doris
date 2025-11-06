@@ -1,6 +1,6 @@
-﻿# Formato tabular simple de intercambio de certificados de defunción
+﻿# Formato tabular sencillo de intercambio de certificados de defunción
 
-Se trata de un formato específico utilizado por [DORIS](https://icd.who.int/doris/es) como alternativa tabular sencilla al [formato JSON estructurado](json-format.md).
+Se trata de un formato específico utilizado por [DORIS](https://icd.who.int/doris/es) como alternativa tabular sencilla al [formato JSON estándar](json-format.md).
 
 Este formato puede usarse como un archivo de Excel (.xlsx) o como archivo de texto separado por comas (.csv). 
 
@@ -23,7 +23,7 @@ Los tipos de datos utilizados son:
 | `string` | En archivos CSV, los valores alfanuméricos deben ir entre comillas `"`. | 
 | `integer` | Campo numérico, se permiten solo números enteros | 
 | `boolean` | Los valores permitidos son `true` y `false` | 
-| `date` | El campo de fecha del certificado usa el formato definido por la [W3C](https://www.w3.org/TR/NOTE-datetime). En archivos CSV, el valor de la fecha debe ir entre comillas `"`. | 
+| `date` | El campo de fecha del certificado usa el formato definido en [W3C](https://www.w3.org/TR/NOTE-datetime). En archivos CSV, el valor de la fecha debe ir entre comillas `"`. | 
 | `durations` | Las duraciones definen la cantidad de tiempo transcurrido en un intervalo de tiempo usado en el certificado para el campo de intervalo. El formato está definido en la [norma ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#Durations). En archivos CSV, el valor de duración debe ir entre comillas `"`.|
 
 Ejemplo de fecha:
@@ -66,37 +66,37 @@ Note: Los campos CauseOfDeath pueden presentarse como código, URI o texto. Tene
 
 ## Descripción
 
-| Atributo | Entrada/Salida | Tipo | Descripción | 
+| Atributo | Datos de entrada/salida | Tipo | Descripción | 
 | --- | --- | --- | --- | 
 | `CertificateKey` | _entrada_ | `string` | Puede usarse para identificar el certificado. | 
 | `ICDVersion` | _entrada_ | `string` | Especifica la versión de la CIE utilizada para codificar el certificado. Actualmente, DORIS admite la `ICD11` |
 | `ICDMinorVersion` | _entrada_ | `string` | Especifica la versión menor de la CIE utilizada para la codificación del certificado. | 
 | `Sex` | _entrada_ | `string` | 1: Hombre, 2: Mujer, 9: Desconocido | 
-| `DateBirth` | _entrada_ | `date` | _ver formato de_ _fecha_ _indicado arriba_ | 
-| `DateDeath` | _entrada_ | `date` | _ver formato de fecha indicado arriba_ | 
-| `EstimatedAge` | _entrada_ | `durations` | _ver formato de duración indicado arriba_ | 
-| `CauseOfDeathTextA` | _entrada_ | `string` | Campo de causa A. Condiciones en formato de texto. | 
-| `CauseOfDeathCodeA` | _entrada_ | `string` | Campo de causa A. Códigos de clasificación separados por comas. Se permite el uso de poscoordinación, es decir: "Código de base A & Código de extensión 1 / Código de base B". | 
-| `CauseOfDeathURIA` | _entrada_ | `string` | Campo de causa A. URI de clasificación separado por comas (Solo CIE-11). Se permite el uso de poscoordinación, es decir: "Código de base A & Código de extensión 1 / Código de base B". | 
+| `DateBirth` | _entrada_ | `date` | _Ver formato de_ _fecha_ _indicado arriba_ | 
+| `DateDeath` | _entrada_ | `date` | _Ver formato de fecha indicado arriba_ | 
+| `EstimatedAge` | _entrada_ | `durations` | _Ver formato de duración indicado arriba_ | 
+| `CauseOfDeathTextA` | _entrada_ | `string` | Campo de causa A. Condiciones o problemas de salud en formato de texto. | 
+| `CauseOfDeathCodeA` | _entrada_ | `string` | Campo de causa A. Códigos de clasificación separados por comas. Se permite el uso de poscoordinación, es decir: "Código de base A y Código de extensión 1 / Código de base B". | 
+| `CauseOfDeathURIA` | _entrada_ | `string` | Campo de causa A. URI de clasificación separado por comas (Solo CIE-11). Se permite el uso de poscoordinación, es decir: "Código de base A y Código de extensión 1 / Código de base B". | 
 | `IntervalA` | _entrada_ | `durations` | Intervalo de tiempo desde el inicio hasta la muerte para el campo A.| 
-| `CauseOfDeathTextB` | _entrada_ | `string` | Campo de causa B. Condiciones en formato de texto. | 
-| `CauseOfDeathCodeB` | _entrada_ | `string` | Campo de causa B. Códigos de clasificación separados por comas. Se permite el uso de poscoordinación, es decir: "Código de base A & Código de extensión 1 / Código de base B". | 
-| `CauseOfDeathURIB` | _entrada_ | `string` | Campo de causa B. URI de clasificación separado por comas (Solo CIE-11). Se permite el uso de poscoordinación, es decir: "Código de base A & Código de extensión 1 / Código de base B". | 
-| `IntervalB` | _entrada_ | `durations` | Intervalo de tiempo desde el inicio hasta la muerte para el campo B. | | `CauseOfDeathTextC` | _entrada_ | `string` | Campo de causa C. Condiciones en formato de texto. | 
-| `CauseOfDeathCodeC` | _entrada_ | `string` | Campo de causa C. Códigos de clasificación separados por comas. Se permite el uso de poscoordinación, es decir: "Código de base A & Código de extensión 1 / Código de base B". | 
-| `CauseOfDeathURIC` | _entrada_ | `string` | Campo de causa C. URI de clasificación separado por comas (Solo CIE-11). Se permite el uso de poscoordinación, es decir: "Código de base A & Código de extensión 1 / Código de base B". | 
+| `CauseOfDeathTextB` | _entrada_ | `string` | Campo de causa B. Condiciones o problemas de salud en formato de texto. | 
+| `CauseOfDeathCodeB` | _entrada_ | `string` | Campo de causa B. Códigos de clasificación separados por comas. Se permite el uso de poscoordinación, es decir: "Código de base A y Código de extensión 1 / Código de base B". | 
+| `CauseOfDeathURIB` | _entrada_ | `string` | Campo de causa B. URI de clasificación separado por comas (Solo CIE-11). Se permite el uso de poscoordinación, es decir: "Código de base A y Código de extensión 1 / Código de base B". | 
+| `IntervalB` | _entrada_ | `durations` | Intervalo de tiempo desde el inicio hasta la muerte para el campo B. | | `CauseOfDeathTextC` | _entrada_ | `string` | Campo de causa C. Condiciones o problemas de salud en formato de texto. | 
+| `CauseOfDeathCodeC` | _entrada_ | `string` | Campo de causa C. Códigos de clasificación separados por comas. Se permite el uso de poscoordinación, es decir: "Código de base A y Código de extensión 1 / Código de base B". | 
+| `CauseOfDeathURIC` | _entrada_ | `string` | Campo de causa C. URI de clasificación separado por comas (Solo CIE-11). Se permite el uso de poscoordinación, es decir: "Código de base A y Código de extensión 1 / Código de base B". | 
 | `IntervalC` | _entrada_ | `durations` | Intervalo de tiempo desde el inicio hasta la muerte para el campo C. | 
-| `CauseOfDeathTextD` | _entrada_ | `string` | Campo de causa D. Condiciones en formato de texto. | 
-| `CauseOfDeathCodeD` | _entrada_ | `string` | Campo de causa D. Códigos de clasificación separados por comas. Se permite el uso de poscoordinación, es decir: "Código de base A & Código de extensión 1 / Código de base B". | 
-| `CauseOfDeathURID` | _entrada_ | `string` | Campo de causa D. URI de clasificación separado por comas (Solo CIE-11). Se permite el uso de poscoordinación, es decir: "Código de base A & Código de extensión 1 / Código de base B". | 
+| `CauseOfDeathTextD` | _entrada_ | `string` | Campo de causa D. Condiciones o problemas de salud en formato de texto. | 
+| `CauseOfDeathCodeD` | _entrada_ | `string` | Campo de causa D. Códigos de clasificación separados por comas. Se permite el uso de poscoordinación, es decir: "Código de base A y Código de extensión 1 / Código de base B". | 
+| `CauseOfDeathURID` | _entrada_ | `string` | Campo de causa D. URI de clasificación separado por comas (Solo CIE-11). Se permite el uso de poscoordinación, es decir: "Código de base A y Código de extensión 1 / Código de base B". | 
 | `IntervalD` | _entrada_ | `durations` | Intervalo de tiempo desde el inicio hasta la muerte para el campo D. | 
-| `CauseOfDeathTextE` | _entrada_ | `string` | Campo de causa E. Condiciones en formato de texto. | 
-| `CauseOfDeathCodeE` | _entrada_ | `string` | Campo de causa E. Códigos de clasificación separados por comas. Se permite el uso de poscoordinación, es decir: "Código de base A & Código de extensión 1 / Código de base B". | 
-| `CauseOfDeathURIE` | _entrada_ | `string` | Campo de causa E. URI de clasificación separado por comas (Solo CIE-11). Se permite el uso de poscoordinación, es decir: "Código de base A & Código de extensión 1 / Código de base B". | 
+| `CauseOfDeathTextE` | _entrada_ | `string` | Campo de causa E. Condiciones o problemas de salud en formato de texto. | 
+| `CauseOfDeathCodeE` | _entrada_ | `string` | Campo de causa E. Códigos de clasificación separados por comas. Se permite el uso de poscoordinación, es decir: "Código de base A y Código de extensión 1 / Código de base B". | 
+| `CauseOfDeathURIE` | _entrada_ | `string` | Campo de causa E. URI de clasificación separado por comas (Solo CIE-11). Se permite el uso de poscoordinación, es decir: "Código de base A y Código de extensión 1 / Código de base B". | 
 | `IntervalE` | _entrada_ | `durations` | Intervalo de tiempo desde el inicio hasta la muerte para el Campo E. | 
-| `CauseOfDeathTextPart2` | _entrada_ | `string` | Campo de causa de la Parte 2. Condiciones en formato de texto. | 
-| `CauseOfDeathCodePart2` | _entrada_ | `string` | Campo de causa de la Parte 2. Códigos de clasificación separados por comas. Se permite el uso de poscoordinación, es decir: "Código de base A & Código de extensión 1 / Código de base B". | 
-| `CauseOfDeathURIPart2` | _entrada_ | `string` | Campo de causa de la Parte 2. URI de clasificación separado por comas. Se permite el uso de poscoordinación, es decir: "Código de base A & Código de extensión 1 / Código de base B". | 
+| `CauseOfDeathTextPart2` | _entrada_ | `string` | Campo de causa de la Parte 2. Condiciones o problemas de salud en formato de texto. | 
+| `CauseOfDeathCodePart2` | _entrada_ | `string` | Campo de causa de la Parte 2. Códigos de clasificación separados por comas. Se permite el uso de poscoordinación, es decir: "Código de base A y Código de extensión 1 / Código de base B". | 
+| `CauseOfDeathURIPart2` | _entrada_ | `string` | Campo de causa de la Parte 2. URI de clasificación separado por comas. Se permite el uso de poscoordinación, es decir: "Código de base A y Código de extensión 1 / Código de base B". | 
 | `SurgeryWasPerformed` | _entrada_ | `integer` | 0: No, 1: Sí, 9: Desconocido | 
 | `SurgeryDate` | _entrada_ | `date` | _ver formato de fecha indicado arriba_ | 
 | `SurgeryReason` | _entrada_ | `string` | Si la respuesta es sí, especifique el motivo de la cirugía (enfermedad o condición). | 
