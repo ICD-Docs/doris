@@ -61,7 +61,7 @@ Para evitar ambigüedades, "P1M" representa una duración de un mes y "PT1M" rep
 Ejemplos prácticos: “PT10S” indica una duración de diez segundos, “PT10M” indica una duración de diez minutos, “PT10H” indica una duración de diez horas, “P5D” indica una duración de cinco días, “P2W” indica una duración de dos semanas, “P10M” indica una duración de diez meses y “P10Y” indica una duración de diez años. “”, “P” o “PT” se utilizan para intervalos desconocidos. \`\`\`
 
 ```
-Note: Los campos CauseOfDeath pueden presentarse como código, URI o texto. Tenemos columnas individual para estos campos. Hay que tener uno de ellos. 
+Nota: Los campos CauseOfDeath pueden presentarse como código, URI o texto. Tenemos columnas individual para estos campos. Hay que tener uno de ellos. 
 ```
 
 ## Descripción
