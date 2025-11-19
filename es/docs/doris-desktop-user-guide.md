@@ -116,7 +116,7 @@ Es posible cambiar el idioma de la herramienta haciendo clic en la opción `Camb
 
 El idioma actual se muestra en color naranja; para cambiar de idioma, haga clic en otro idioma.
 
-\** IMPORTANTE \** Si el idioma seleccionado no se ha utilizado anteriormente, para cambiarlo hay que tener conexión a Internet; si ya que el sistema necesita descargar la CIE en ese idioma para habilitar el procesamiento de texto a código.
+\** IMPORTANTE \** Si el idioma seleccionado no se ha utilizado anteriormente, para cambiarlo hay que tener conexión a Internet; ya que el sistema necesita descargar la CIE en ese idioma para habilitar el procesamiento de texto a código.
 
 El sistema utiliza el idioma seleccionado en tres aspectos distintos: 
 - La interfaz de usuario de la herramienta cambia al idioma seleccionado.
