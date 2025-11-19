@@ -23,6 +23,6 @@
 -	Se ampliaron las capacidades de análisis de DORIS al incorporar campos adicionales en la sección B, como la manera de morir, el estado respecto al embarazo y otros. Gracias a esta información complementaria, DORIS puede realizar análisis más completos y precisos, lo que mejora la selección de la causa básica de defunción.
 -	Se introdujeron nuevos controles y alertas automáticas. Estas funciones mejoran la precisión y fiabilidad de los resultados.
 -	Se introdujeron datos de salida compatibles con ANACoD-3 como una opción adicional de exportación desde DORIS. Esta opción de salida facilita la integración con otros sistemas y flujos de trabajo, mejorando la eficiencia general del procesamiento de datos.
--	La base de reglas digitales de mortalidad se ha optimizado con mejoras y aclaraciones importantes, basadas en comentarios obtenidos en los talleres de MRD. Estas mejoras aumentan aún más el rendimiento y la fiabilidad de DORIS.
+-	La base de reglas digitales de mortalidad se ha optimizado con mejoras y aclaraciones importantes, basadas en comentarios obtenidos en los talleres sobre la digitalización de las reglas de mortalidad. Estas mejoras aumentan aún más el rendimiento y la fiabilidad de DORIS.
 -	Ya está disponible la guía de usuario en línea de DORIS.
 -   Las reglas utilizadas por la herramienta ahora se mantienen a través de la plataforma de autoría de reglas de mortalidad (Mortality Rules Authoring platform).
