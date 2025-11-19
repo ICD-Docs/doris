@@ -7,7 +7,7 @@ Como parte de la solución digital integral de la CIE-11 para la notificación d
 
  > Se puede acceder a más programas informáticos y herramientas a través de [la página de la OMS sobre causas de defunción](https://www.who.int/es/standards/classifications/classification-of-diseases/cause-of-death) o [la página de inicio de la CIE-11](https://icd.who.int/es). 
 
-## Certificado médico de causa de defunción (CMCD eletrónico)
+## Certificado médico de causa de defunción (CMCD electrónico)
 
 El certificado médico de causa de defunción es la base para recopilar información sobre las causas de muerte. El formulario está diseñado para recoger todos los aspectos relevantes al asignar la causa de muerte, y es independiente de la versión de la CIE. Además del formulario en papel que se presenta en la sección 3.14, se proporcionan las especificaciones técnicas para un formulario digital. Estas especificaciones permiten estandarizar la entrada de datos conforme al formulario modelo e incluyen un diccionario de datos con los nombres de los campos y la codificación del contenido, lo que permite procesar la información mediante la API de codificación, así como con el software de selección de la causa básica de defunción.
 
