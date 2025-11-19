@@ -1,6 +1,6 @@
-﻿# Formato tabular sencillo de intercambio de certificados de defunción
+﻿# Formato tabular simple de intercambio de certificados de defunción
 
-Se trata de un formato específico utilizado por [DORIS](https://icd.who.int/doris/es) como alternativa tabular sencilla al [formato JSON estándar](json-format.md).
+Se trata de un formato específico utilizado por [DORIS](https://icd.who.int/doris/es) como alternativa tabular simple al [formato JSON estándar](json-format.md).
 
 Este formato puede usarse como un archivo de Excel (.xlsx) o como archivo de texto separado por comas (.csv). 
 
