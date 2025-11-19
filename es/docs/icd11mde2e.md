@@ -20,7 +20,7 @@ La CIE-11 ofrece un navegador conocido como el “navegador azul” y una herram
 
 ## Sistema Digital Abierto de la OMS para la Selección Integrada de la Causa de Defunción
 
-La herramienta DORIS está diseñada para ayudar en la selección automatizada de la causa básica de defunción. Puede utilizarse en línea o sin conexión, y admite tanto texto libre como conjuntos de datos codificados según la CIE-11. Para que el software pueda hacer el procesaimiento, se digitalizaron las reglas de mortalidad de la CIE descritas en la sección 2.21 de la _Guía de referencia_, lo que dio lugar al conjunto de reglas digitales de mortalidad de la CIE-11. Si necesita ayuda para utilizar la herramienta, envíe un correo electrónico a icd@who.int.
+La herramienta DORIS está diseñada para ayudar en la selección automatizada de la causa básica de defunción. Puede utilizarse en línea o sin conexión, y admite tanto texto libre como conjuntos de datos codificados según la CIE-11. Para que el software pueda hacer el procesamiento, se digitalizaron las reglas de mortalidad de la CIE descritas en la sección 2.21 de la _Guía de referencia_, lo que dio lugar al conjunto de reglas digitales de mortalidad de la CIE-11. Si necesita ayuda para utilizar la herramienta, envíe un correo electrónico a icd@who.int.
 
  > Para obtener más información, haga clic [aquí](https://icd.who.int/doris/es). 
 
