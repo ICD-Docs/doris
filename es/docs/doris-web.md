@@ -48,7 +48,7 @@ En el caso de las mujeres:
 
 ![pregnancyscreenshotpicture ](img/pregnancyscreenshotupdated.png)
 
-El botón **contenido de ejemplo** proporciona casos que demuestran cómo funciona la versión en línea de DORIS. Los usuarios pueden consultar estos casos demuestra para saber cómo utilizar la versión en línea.
+El botón **contenido de ejemplo** proporciona casos que demuestran cómo funciona la versión en línea de DORIS. Los usuarios pueden consultar estos casos de muestra para saber cómo utilizar la versión en línea.
 
 Además, se agregó el botón **borrar contenido**. Al hacer clic en este botón, los usuarios pueden iniciar un nuevo certificado de defunción con todos los campos vacíos, y así comenzar una nueva entrada sin datos previos.
 

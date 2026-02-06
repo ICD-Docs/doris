@@ -1,7 +1,7 @@
 ﻿
 # Formato de intercambio de certificados de defunción
 
-El objetivo principal de este formato es crear una representación electrónica normalizada del [formulario internacional de certificado médico de causa de defunción](https://icdcdn.who.int/static/releasefiles/2024-01/ICD-11-Reference-Guide-2024-01-es.pdf#page=404).
+El objetivo principal de este formato es crear una representación electrónica estándar del [formulario internacional de certificado médico de causa de defunción](https://icdcdn.who.int/static/releasefiles/2024-01/ICD-11-Reference-Guide-2024-01-es.pdf#page=404).
 
 
 El **certificado de defunción** se define en formato *JSON*. 

@@ -7,7 +7,7 @@ Como parte de la solución digital integral de la CIE-11 para la notificación d
 
  > Se puede acceder a más programas informáticos y herramientas a través de [la página de la OMS sobre causas de defunción](https://www.who.int/es/standards/classifications/classification-of-diseases/cause-of-death) o [la página de inicio de la CIE-11](https://icd.who.int/es). 
 
-## Certificado médico de causa de defunción (CMCD eletrónico)
+## Certificado médico de causa de defunción (CMCD electrónico)
 
 El certificado médico de causa de defunción es la base para recopilar información sobre las causas de muerte. El formulario está diseñado para recoger todos los aspectos relevantes al asignar la causa de muerte, y es independiente de la versión de la CIE. Además del formulario en papel que se presenta en la sección 3.14, se proporcionan las especificaciones técnicas para un formulario digital. Estas especificaciones permiten estandarizar la entrada de datos conforme al formulario modelo e incluyen un diccionario de datos con los nombres de los campos y la codificación del contenido, lo que permite procesar la información mediante la API de codificación, así como con el software de selección de la causa básica de defunción.
 
@@ -20,7 +20,7 @@ La CIE-11 ofrece un navegador conocido como el “navegador azul” y una herram
 
 ## Sistema Digital Abierto de la OMS para la Selección Integrada de la Causa de Defunción
 
-La herramienta DORIS está diseñada para ayudar en la selección automatizada de la causa básica de defunción. Puede utilizarse en línea o sin conexión, y admite tanto texto libre como conjuntos de datos codificados según la CIE-11. Para que el software pueda hacer el procesaimiento, se digitalizaron las reglas de mortalidad de la CIE descritas en la sección 2.21 de la _Guía de referencia_, lo que dio lugar al conjunto de reglas digitales de mortalidad de la CIE-11. Si necesita ayuda para utilizar la herramienta, envíe un correo electrónico a icd@who.int.
+La herramienta DORIS está diseñada para ayudar en la selección automatizada de la causa básica de defunción. Puede utilizarse en línea o sin conexión, y admite tanto texto libre como conjuntos de datos codificados según la CIE-11. Para que el software pueda hacer el procesamiento, se digitalizaron las reglas de mortalidad de la CIE descritas en la sección 2.21 de la _Guía de referencia_, lo que dio lugar al conjunto de reglas digitales de mortalidad de la CIE-11. Si necesita ayuda para utilizar la herramienta, envíe un correo electrónico a icd@who.int.
 
  > Para obtener más información, haga clic [aquí](https://icd.who.int/doris/es). 
 
