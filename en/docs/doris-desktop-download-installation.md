@@ -2,7 +2,7 @@
 
 The DORIS Desktop software can be downloaded from the following link:
 
-- Version 1.1 
+- Version 1.2 
 	- Download link for Windows x64: [DorisDesktop_1.2.6.0_x64.msix](https://icdcdn.who.int/doris/DorisDesktop_1.2.6.0_x64.msix)
 	- Download link for Windows arm64: [DorisDesktop_1.2.6.0_arm64.msix](https://icdcdn.who.int/doris/DorisDesktop_1.2.6.0_arm64.msix)
 	
