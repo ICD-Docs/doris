@@ -33,14 +33,6 @@ You could open an existing DORIS dataset using the `Data`/`Open Doris Dataset` m
 
 ![Open Dataset](img/dataset-open.png){: style="width:30%"}
 
-### Dataset Information
-Once a dataset is open, you may use the Dataset Information button or `Data`/`Dataset Information` menu to see information on the dataset.
-![Dataset Information](img/dataset-info.png){: style="width:50%"}
-
-This information contains the number of certificates, whether the data contains coded or textual data, whether the data is processed, and various other information on the dataset. You may see a sample below
-
-![Dataset Information2](img/dataset-info2.png){: style="width:60%"}
-
 
 ### Working with certificates that use textual data
 If the imported data does not contain codes but textual conditions, then the tool will add codes using text-to-code processing during the importing phase. This process places the auto-assigned codes in the `Code(auto)` column in the tool together with an additional column `Match` that shows the quality of the text-to-code matching process.
