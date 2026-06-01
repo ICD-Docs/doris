@@ -1,150 +1,146 @@
-# DORIS Desktop User Guide
+# DORIS versión de escritorio: guía para el usuario
 
-DORIS Desktop is a software solution tailored for the efficient batch processing of death certificates. It facilitates the analysis of vast quantities of data, accommodating both coded and textual diagnoses. The software's design emphasizes ease of use, allowing for the importation of certificates in diverse formats such as standard e-MCCD in JSON, Excel and CSV. 
+DORIS versión de escritorio es una herramienta informática diseñada para procesar por lotes certificados de defunción de una manera eficiente. Permite analizar grandes volúmenes de datos sobre diagnósticos, tanto en formato codificado como en formato de texto. El diseño del software prioriza la facilidad de uso y permite importar certificados en diversos formatos como el CMCD electrónico estándar en JSON, Excel y CSV. 
 
-![DORIS desktop](img/Desktopversion24.png)
+![DORIS versión de escritorio](img/Desktopversion24.png)
 
-DORIS Desktop requires a `DORIS Dataset` to work with. You may import certificates from a file in one of the supported formats. Once a file is imported, it is saved as a `DORIS Dataset`. After that, everything done in the software uses this `DORIS dataset`. For example, If you use `Process` to compute the underlying cause of death on all certificates, This information is saved into the Doris Dataset and remembered.
-You can always open a DORIS Dataset using `Open DORIS Dataset` menu to return to where you left off. 
+La versión de escritorio de DORIS requiere un `conjunto de datos de DORIS` para funcionar. Puede importar certificados desde un archivo en cualquiera de los formatos compatibles. Una vez importado, el archivo se guarda como `conjunto de datos de DORIS`. Cualquier acción realizada en el programa a partir de este momento utiliza el `conjunto de datos de DORIS`. Por ejemplo, si utiliza el botón `Procesar`, el software calcula la causa básica de defunción para todos los certificados y guarda esta información en el conjunto de datos, que se conserva para futuras sesiones. Para continuar al punto donde lo dejó, puede volver a abrir un conjunto de datos de DORIS desde el menú `Abrir conjunto de datos de DORIS`. 
 
-You can always `Export` the certificates in a `DORIS Dataset` into supported formats.
+También puede `Exportar` los certificados de un `conjunto de datos de DORIS` en los formatos compatibles.
 
-## Importing Data
-You may import certificates using one of the supported file formats. Details of the formats and sample files are available at the links below:
+## Importar datos
+Puede importar certificados utilizando uno de los formatos de archivo compatibles. En los siguientes enlaces encontrará información sobre los formatos así como archivos de muestra:
 
-- Detailed description of the [Tabular format for Excel and CSV files](csv-excel-format.md)
+- Descripción detallada del [formato tabular para archivos Excel y CSV](csv-excel-format.md)
 
-- Detailed description of the [Standard JSON format](json-format.md)
+- Descripción detallada del [formato JSON estándar](json-format.md)
 
-![Import menu](img/menu-import.png){: style="width:40%"}
+![Import menu](img/menu-import.png)
 
-To import from a file, choose `Import from .xlsx, .csv or .json Files` menu item under the `Data` menu. After that, you need to pick the file that you'd like to import. Then the tool will ask you for a file name for the `DORIS dataset` that will be created. By default, the Doris datasets are created under the Documents folder in Windows. 
+Para importar un archivo, seleccione la opción `Importar archivos .xlsx, .csv o .json` en el menú `Datos`. A continuación, deberá elegir el archivo que desea importar. Después, la herramienta le pedirá un nombre para el `conjunto de datos de DORIS` que se creará. De manera predeterminada, los conjuntos de datos de DORIS se guardan en la carpeta Documentos de Windows. 
 
-![Dataset name dialog](img/dataset-filename.png){: style="width:50%"}
+![Nombre del conjunto de datos diálogo{](img/dataset-filename.png)
 
-After giving a file name and clicking `OK`, DORIS will import the file and will show you the contents. The system will show a progress bar at the bottom of the screen if it's a large file that takes time to import.
+Después de nombrar el archivo y hacer clic en `De acuerdo`, DORIS importará el archivo y mostrará su contenido. Si el archivo es grande y tarda en cargarse, el sistema mostrará una barra de progreso en la parte inferior de la pantalla.
 
-## Working with DORIS Dataset
-DORIS Desktop works with DORIS datasets which are created after you import data using a supported file format. By default, the Doris datasets are created under the Documents folder in Windows. This can be changed from the `Settings`/`Change Default Dataset Folder` menu.
-
-
-### Opening a Dataset
-You could open an existing DORIS dataset using the `Data`/`Open Doris Dataset` menu
-
-![Open Dataset](img/dataset-open.png){: style="width:30%"}
-
-### Dataset Information
-Once a dataset is open, you may use the Dataset Information button or `Data`/`Dataset Information` menu to see information on the dataset.
-![Dataset Information](img/dataset-info.png){: style="width:50%"}
-
-This information contains the number of certificates, whether the data contains coded or textual data, whether the data is processed, and various other information on the dataset. You may see a sample below
-
-![Dataset Information2](img/dataset-info2.png){: style="width:60%"}
+## Trabajar con un conjunto de datos de DORIS
+DORIS versión de escritorio usa conjuntos de datos de DORIS, que se crean tras importar datos en un formato de archivo compatible. De manera predeterminada, los conjuntos de datos de DORIS se guardan en la carpeta Documentos de Windows. Esta ubicación puede modificarse en la opcion `Cambiar la carpeta predeterminada` del menú `Configuración`.
 
 
-### Working with certificates that use textual data
-If the imported data does not contain codes but textual conditions, then the tool will add codes using text-to-code processing during the importing phase. This process places the auto-assigned codes in the `Code(auto)` column in the tool together with an additional column `Match` that shows the quality of the text-to-code matching process.
+### Abrir un conjunto de datos
+Puede abrir un conjunto de datos de DORIS existente haciendo clic en `Abrir conjunto de datos de Doris` en el menú `Datos`. 
 
-We suggest that automatic text to code conversions are checked by experts especially when the match is not a `GoodMatch` 
-![Text to code columns](img/texttocode-columns.png){: style="width:60%"}
+![Open Dataset](img/dataset-open.png)
 
-Text-to-code conversion issues button can be used to easily filter out the cases that contain text-to-code processing with non-GoodMatch results.
-![Text to code issues button](img/texttocode-issues-button.png){: style="width:20%"}
+### Información del conjunto de datos
+Una vez abierto un conjunto de datos, puede usar la opción `Información del conjunto de datos` en el menú `Datos`. 
 
-### Processing the Dataset (Underlying Cause of Death Detection)
+![Dataset Information](img/dataset-info.png)
 
-Processing the file will compute the underlying cause of death for each certificate. This is done by using the menu `Process`
-![Process menu](img/process-menu.png){: style="width:40%"}
+Esta información incluye detalles sobre el conjunto de datos, como el número de certificados, si son datos codificados o datos textuales y si se han procesado. A continuación se muestra un ejemplo:
 
-If it's a large dataset, the system will display a progress bar at the bottom of the screen to show the progress.
-
-Once the processing is finished, the results are in the `Underlying Cause of Death (UCOD)` column. If the underlying cause of death is a postcoordination combination it is placed in the `UCOD with postcoordination information` column. Rejected certificates are marked in the `Reject` column and Errors and Warnings are placed in the `Error` and `Warnings` columns.
-
-![UCOD columns](img/ucod-columns.png){: style="width:80%"}
-
- Certificates that are rejected or have other problems can be easily filtered out by using the Processing Issues button.
-![Processing issues button](img/processing-issues-button.png){: style="width:20%"}  
-
-### Filtering and Sorting
-It is possible to sort the certificates by the values of a selected column by clicking on the column label. 
-
-Similarly, filtering is possible by using the filter icons located near the column labels.
-![Filtering](img/filter.png){: style="width:30%"}
-
-### Editing Individual Certificates
-
-Clicking the number in the `Id` column opens the certificate in full-view mode.
-![Open certificate](img/open-cert.png){: style="width:80px"}
-
-In full-view mode, all information in the certificate as well as the computed underlying cause of death is shown to the user
-![Certificate full-view](img/cert-fullview.png){: style="width:80%"}
-
-When opened, the system will not allow editing the certificate. To edit it you need to click the unlock button at the bottom.
-![unlock icon](img/unlock.png){: style="width:30px"}
-
-Once unlocked, you can edit the certificate. Condition lines accept only valid ICD-11 Codes. Editing textual diagnosis is not possible however you could overwrite the textual diagnosis by providing code(s)
-
-Once editing is complete, you may save it by clicking the `Save` button, If not saved, the tool will ignore the changes made after closing the full view.
-
-Closing full-view mode is done by clicking the `X` at the top left corner.
-
-`Process` button in the full-view will reprocess the certificate to find the underlying cause of death. This is saved only after `Save` is pressed. 
-
-It is also possible to process all edited certificates by using the `Process` menu after closing the full view.
-
-### Report vizualisation for Individual Certificates
-
-The DORIS tool provides four complementary visualization modes to support review, validation, and training:
-
-**Textual Report**: This visualization illustrates the steps and mortality rules that were applied in the selection of the underlying cause of death. The report includes a **warnings** field, which flags any inconsistencies in the reported information or suggests the need for manual verification. The warnings are displayed in yellow. Following the warnings, a concise report outlines the main steps that were applied. For a more detailed understanding, a full report is also included in the output section. This comprehensive report provides a thorough explanation of the sequence followed, along with detailed information about the mortality rules and steps that were applied or not during the selection of the underlying cause of death.
-
-![Textualreport](img/textualreportdesktop.png){: style="width:40%"}
-
-**Tabular Report:** This interactive visualization displays the steps for UCOD selection in a tabular format. Clicking on the rows allows to follow the steps one after the other from top to bottom and accordingly the rules applied will be highlighted on the certificate
-
-![Tabularreport](img/tabularreportdesktop.png){: style="width:40%"}
-
-**Rule Flow Report:**  This visualization displays the report as a sequence of applied rules ultimately leading to the selected UCOD.
-
-![Ruleflowreport](img/Ruleflowreportdesktop.png){: style="width:40%"}
-
-**Rule Sequence Report:** This visualization displays the report as a horizontal sequence. The specific rules applied at each step are listed below showing the order in which the rules were applied from top to bottom.
-
-![Rulesequencereport](img/Rulesequencereportdesktop.png){: style="width:40%"}
-
-## Settings
-### Changing Language
-Changing the language of the tool is possible by clicking the `Settings`/`Change Language` menu. Once clicked, the system will show the available languages in a new dialog.
-![Change Language](img/Changingthelanguage2025.png){: style="width:50%"} 
-The current language is shown in orange color and clicking on another language changes the language.
-
-** IMPORTANT! ** Changing the language requires an Internet connection if the language that is selected has not been used before as the system needs to download the ICD in that language to enable text-to-code processing.
-
-The system uses the language that is selected for 3 separate things:
-- The user interface of the tool switches to the selected language.
-- During import, if the certificates have textual diagnoses the language selected is used during the text-to-code processing.
-- During processing for underlying cause of death detection, the warning messages are provided in the selected language.
-
-** IMPORTANT! **  Changing the language is possible only before opening a database. When switching languages please close the application and retry before opening a database
-
-### Changing ICD-11 Version
-By default, DORIS Desktop uses the latest released version of ICD-11.
-
-It is possible to use another version of ICD-11 during the processing of the certificates. This is done using the `Settings`/`Change ICD Version` menu.
-
-2023 and 2024 versions of ICD-11 are supported by DORIS.
-
-IMPORTANT! Changing the ICD version requires an Internet connection if the version that is selected has not been used before as the system needs to download that version of ICD.
+![Dataset Information2](img/dataset-info2.png)
 
 
-### Changing the default Doris dataset folder
-By default, the Doris datasets are created under the Documents folder in Windows. You may change this default folder from the `Settings`/`Change Default Dataset Folder` menu
+### Trabajar con certificados que usan datos textuales
+Si los datos importados no están codificados, sino que contienen condiciones o problemas de salud en forma de texto, la herramienta asignará automáticamente códigos mediante el procesamiento de texto a código durante la fase de importación. Este proceso coloca los códigos asignados automáticamente en la columna `Código (auto)` junto a una columna adicional, `Coincidencia automática`, que indica la calidad de la conversión de texto a código.
 
-## Exporting Data
-Exporting data in the supported formats is possible using the `Data`/`Export xxxx` menu items
-![Export](img/export.png){: style="width:20%"}
+Se recomienda que las conversiones automáticas de texto a código sean revisadas por expertos, especialmente cuando la coincidencia no sea una `Buena coincidencia` 
 
-The system then asks you where to save the file as well as the file name.
+![Text to code columns](img/texttocode-columns.png).
 
-After you export the ANACOD output, you need to fill in the columns with the national or local information on the population, the year, the ISO country code, etc. before you import in ANACoD-3 tool. 
-[More information on ANACOD-3](icd.who.int/anacod)
+El botón de problemas de conversión de texto a código se puede utilizar para filtrar aquellos casos en los que no hubo una buena coincidencia en los resultados de la conversión. 
+
+![Text to code issues button](img/texttocode-issues-button.png)
+
+### Procesamiento del conjunto de datos (detección de la causa básica de defunción)
+
+Al realizar el procesamiento del archivo se calculará la causa básica de defunción para cada certificado. Esto se realiza en el menú `Procesar`. 
+
+![Process menu{](img/process-menu.png)
+
+Si el conjunto de datos es grande, el sistema mostrará una barra de progreso en la parte inferior de la pantalla para indicar el avance.
+
+Una vez finalizado el procesamiento, los resultados aparecen en la columna `Causa básica de defunción (CBD)`. Si la causa básica de defunción corresponde a varios códigos poscoordinados, se mostrará en la columna `CBD con información poscoordinada`. Los certificados rechazados se indican en la columna `Rechazado` y los errores y advertencias se muestran en las columnas `Error` y `Alertas`.
+
+![UCOD columns](img/ucod-columns.png)
+
+ Los certificados que han sido rechazados o presentan otros problemas pueden filtrarse fácilmente utilizando el botón de problemas de procesamiento. ![Processing issues button](img/processing-issues-button.png)  
+
+### Aplicación de filtros y clasificación
+Para ordenar los certificados según los valores de una columna seleccionada, haga clic en la etiqueta de la columna. 
+
+Para aplicar filtros, puede utilizar los iconos de filtro ubicados a un lado de la etiqueta de las columnas. ![Filtering](img/filter.png)
+
+### Edición de certificados individuales
+
+Haga clic en el número de la columna `Id` para abrir el certificado en modo de vista completa. ![Open certificate](img/open-cert.png)
+
+En el modo de vista completa, se muestra al usuario toda la información contenida en el certificado, así como la causa básica de defunción calculada ![Certificate full-view](img/cert-fullview.png)
+
+Una vez abierto, el sistema no permite editar el certificado. Para poder editarlo, debe hacer clic en el botón de desbloqueo situado en la parte inferior del certificado. ![unlock icon](img/unlock.png)
+
+Una vez desbloqueado, puede editar el certificado. Las líneas correspondientes a condiciones o problemas de salud solo permiten códigos de la CIE-11 válidos. No es posible editar el diagnóstico textual, aunque se puede sobrescribir indicando los códigos correspondientes.
+
+Una vez finalizada la edición, puede guardar los cambios con el botón `Guardar`. Si no guarda sus cambios, la herramienta los borrará al cerrar la vista completa.
+
+Para cerrar el modo de vista completa, haga clic en la `X` situada en la esquina superior izquierda.
+
+El botón `Procesar` en modo de vista completa volverá a procesar el certificado para calcular la causa básica de defunción. Esto solo se guardará haciendo clic en `Guardar`. 
+
+También es posible procesar todos los certificados editados desde el menú `Procesar`, después de cerrar el modo de vista completa.
+
+### Visualización del informe para certificados individuales
+
+DORIS ofrece cuatro modos de visualización complementarios para brindar apoyo en la revisión, la validación y la capacitación:
+
+**Reporte textual**: Este modo de visualización ilustra los pasos y las reglas de mortalidad que se aplicaron para seleccionar la causa básica de defunción. Incluye un campo de **alertas**, que señala cualquier incoherencia en la información proporcionada o indica que es necesario hacer una verificación manual. Las alertas se muestran en amarillo. Después de las alertas, se presenta un informe conciso que resume los principales pasos aplicados. En la sección de resultados también se presenta un informe completo, para una comprensión más profunda. Este informe exhaustivo ofrece una explicación completa de la secuencia registrada, junto con información detallada sobre las reglas de mortalidad y los pasos que se aplicaron o no durante la selección de la causa básica de defunción.
+
+![Textualreport](img/textualreportdesktop.png)
+
+**Reporte tabular:** En esta visualización interactiva se muestran los pasos para la selección de la causa básica de defunción en forma de tabla. Haciendo clic en las filas se pueden seguir los pasos uno tras otro, de arriba a abajo, y las reglas aplicadas se resaltarán en el certificado
+
+![Tabularreport](img/tabularreportdesktop.png)
+
+**Informe de flujo de reglas:** En esta visualización se muestra el informe como una secuencia de reglas aplicadas que conducen finalmente a la causa básica de defunción seleccionada.
+
+![Ruleflowreport](img/Ruleflowreportdesktop.png)
+
+**Informe de secuencia de reglas:** Esta visualización del informe se muestra como una secuencia horizontal. Las reglas específicas aplicadas en cada paso se muestran en el orden en que se aplicaron, de la parte superior a la inferior de la pantalla.
+
+![Rulesequencereport](img/Rulesequencereportdesktop.png)
+
+## Configuración
+### Cambiar el idioma
+Es posible cambiar el idioma de la herramienta haciendo clic en la opción `Cambiar idioma` en el menú `Configuración`. Al hacer clic allí, el sistema mostrará los idiomas disponibles en un nuevo cuadro de diálogo. ![Change Language](img/Changingthelanguage2025.png)
+
+El idioma actual se muestra en color naranja; para cambiar de idioma, haga clic en otro idioma.
+
+\** IMPORTANTE \** Si el idioma seleccionado no se ha utilizado anteriormente, para cambiarlo hay que tener conexión a Internet; ya que el sistema necesita descargar la CIE en ese idioma para habilitar el procesamiento de texto a código.
+
+El sistema utiliza el idioma seleccionado en tres aspectos distintos: 
+- La interfaz de usuario de la herramienta cambia al idioma seleccionado.
+- Durante la importación, si los certificados contienen diagnósticos en formato de texto, se usa el idioma seleccionado para el procesamiento de texto a código.
+- Durante el procesamiento para detectar la causa básica de defunción, los mensajes de advertencia se muestran en el idioma seleccionado.
+
+\** IMPORTANTE \** Solo es posible cambiar el idioma antes de abrir un conjunto de datos. Si desea cambiar el idioma, cierre la aplicación y vuelva a intentarlo antes de abrir un conjunto de datos.
+
+### Cambiar la versión de la CIE-11
+De forma predeterminada, DORIS versión de escritorio utiliza la versión más reciente publicada de la CIE-11.
+
+Se puede usar otra versión de la CIE-11 durante el procesamiento de los certificados. Para ello, utilice la opción `Cambiar versión de la CIE` en el menú `COnfiguración`.
+
+DORIS es compatible con las versiones de la CIE-11 correspondientes al 2023 y el 2024.
+
+IMPORTANTE: Cambiar la versión de la CIE requiere conexión a Internet si la versión seleccionada no se ha utilizado antes, ya que el sistema tiene que descargarla.
+
+
+### Cambiar la carpeta predeterminada para los conjuntos de datos de DORIS
+De manera predeterminada, los conjuntos de datos de DORIS se guardan en la carpeta Documentos de Windows. Puede cambiar la carpeta predeterminada en la opción `Cambiar la carpeta predeterminada` del menú `Configuración`. 
+
+## Exportar datos
+La exportación de datos en los formatos admitidos puede realizarse usando la opcion `Exportar xxxx` desde el menú `Datos` ![Export](img/export.png)
+
+El sistema le preguntará dónde desea guardar el archivo y qué nombre asignarle.
+
+Si exporta el archivo de salida de ANACoD, es necesario completar las columnas con información nacional o local sobre la población, el año, el código ISO del país, etc., antes de importarlo a la herramienta ANACoD-3. [Más información sobre ANACoD-3](icd.who.int/anacod)

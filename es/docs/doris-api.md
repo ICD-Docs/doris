@@ -1,11 +1,10 @@
-# Using DORIS from ICD-API
+# Uso de DORIS desde la API de la CIE
 
-## For Software Developers and System Integrators:
+## Para desarrolladores de software e integradores de sistemas:
 
-It is possible to get access to the DORIS rule engine programmatically from the ICD-API. Currently, there is a prerelease of this system available.
+Es posible acceder al motor de reglas de DORIS de forma programática a través de la API de la CIE. Actualmente, está disponible una versión preliminar de este sistema.
 
 
-- [ICD-API Home page](https://icd.who.int/icdapi) and 
-- [ICD-API documentation](https://icd.who.int/docs/icd-api/DORISSupport/) contains more information on the ICD-API
+- [La página principal de la API de la CIE](https://icd.who.int/icdapi) y [la página con documentación sobre la API de la CIE](https://icd.who.int/docs/icd-api/DORISSupport/) tienen más información sobre la API
 
-- [ICD-API Reference (Open API)](https://id.who.int/swagger/index.html) provides detailed explanations on the endpoints that the API supports including the `doris` endpoint 
+- [En la página de referencia sobre la API de la CIE (Open API)](https://id.who.int/swagger/index.html) se ofrece una explicación detallada sobre los puntos de acceso (<i>endpoints</i>) que admite la API, incluido el de DORIS.   
