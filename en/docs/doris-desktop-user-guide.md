@@ -47,23 +47,38 @@ If the imported data does not contain codes but textual conditions, then the too
 
 We suggest that automatic text to code conversions are checked by experts especially when the match is not a `GoodMatch` 
 ![Text to code columns](img/texttocode-columns.png){: style="width:60%"}
-
+![alt text](image.png)
 Text-to-code conversion issues button can be used to easily filter out the cases that contain text-to-code processing with non-GoodMatch results.
 ![Text to code issues button](img/texttocode-issues-button.png){: style="width:20%"}
 
-### Processing the Dataset (Underlying Cause of Death Detection)
+### Processing the Dataset (COEDIT checks)
+
+Processing the certificates with CODEDIT checks will check for any inconsistencies in the data and will report them
+![Process menu CODEDIT](img/process-menu-codedit.png){: style="width:40%"}
+
+Once the processing fisishes, COEDIT check results are visible at the end of the rows with yellow headers
+![COEDIT columns](img/codedit-columns.png)
+
+The certificates with issues can be filtered using the COEDIT issues button
+![Processing issues button for COEDIT](img/processing-issues-button-codedit.png){: style="width:20%"}  
+### Processing the Dataset (DORIS Underlying Cause of Death Detection)
 
 Processing the file will compute the underlying cause of death for each certificate. This is done by using the menu `Process`
-![Process menu](img/process-menu.png){: style="width:40%"}
+
 
 If it's a large dataset, the system will display a progress bar at the bottom of the screen to show the progress.
 
-Once the processing is finished, the results are in the `Underlying Cause of Death (UCOD)` column. If the underlying cause of death is a postcoordination combination it is placed in the `UCOD with postcoordination information` column. Rejected certificates are marked in the `Reject` column and Errors and Warnings are placed in the `Error` and `Warnings` columns.
+Once the processing is finished, new columns are added at the end of the row with blue headers. The results are in the `Underlying Cause of Death (UCOD)` column. If the underlying cause of death is a postcoordination combination it is placed in the `UCOD with postcoordination information` column. Rejected certificates are marked as TRUE in the `Reject` column and Errors and Warnings are placed in the `Error` and `Warnings` columns.
 
 ![UCOD columns](img/ucod-columns.png){: style="width:80%"}
 
- Certificates that are rejected or have other problems can be easily filtered out by using the Processing Issues button.
-![Processing issues button](img/processing-issues-button.png){: style="width:20%"}  
+ Certificates that are rejected or have other problems can be easily filtered out by using the DORIS Issues button.
+![Processing issues button for DORIS](img/processing-issues-button-doris.png){: style="width:20%"}  
+
+
+### Processing the Dataset (CODEDIT and DORIS)
+
+This will process the data both with COEDIT and DORIS as explained above
 
 ### Filtering and Sorting
 It is possible to sort the certificates by the values of a selected column by clicking on the column label. 
@@ -111,6 +126,19 @@ The DORIS tool provides four complementary visualization modes to support review
 **Rule Sequence Report:** This visualization displays the report as a horizontal sequence. The specific rules applied at each step are listed below showing the order in which the rules were applied from top to bottom.
 
 ![Rulesequencereport](img/Rulesequencereportdesktop.png){: style="width:40%"}
+
+## Dashboard
+
+Summary information on the dataset could be seen using the Dashboard menu.
+
+This provides information on the dataset such as:
+
+- Number of cases 
+- ICD-11 version used
+- Whether text-to-code processing is used or not. If used the amount of good matches vs others
+- Sex and age distributions
+- COEDIT check summaries
+- Underlying cause of death detection summaries
 
 ## Settings
 ### Changing Language
