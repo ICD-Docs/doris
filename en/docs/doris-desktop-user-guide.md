@@ -43,9 +43,9 @@ We suggest that automatic text to code conversions are checked by experts especi
 Text-to-code conversion issues button can be used to easily filter out the cases that contain text-to-code processing with non-GoodMatch results.
 ![Text to code issues button](img/texttocode-issues-button.png){: style="width:20%"}
 
-### Processing the Dataset (COEDIT checks)
+### Processing the Dataset (COEDIT checks) - prerelease -
 
-Processing the certificates with CODEDIT checks will check for any inconsistencies in the data and will report them
+Processing the certificates with CODEDIT checks will check for any inconsistencies in the certificate data and will report them
 ![Process menu CODEDIT](img/process-menu-codedit.png){: style="width:40%"}
 
 Once the processing fisishes, COEDIT check results are visible at the end of the rows with yellow headers
